@@ -1,0 +1,135 @@
+@import "~styles/variables";
+
+:host() {
+    .chat-contacts-search-wrapper {
+        position: relative;
+        .new-message {
+            padding: 25px;
+            font-family: 'Montserrat Bold';
+            font-size: 14px;
+            text-align: center;
+            background: $blue;
+            text-transform: uppercase;
+            color: $white;
+            .fa-plus {
+                margin-right: 10px;
+            }
+        }
+    }
+    .chat-contacts-list {
+        
+        overflow: auto;
+        height: calc(100vh - 202px);
+
+        &-item {
+            &.active{
+                border-right: 4px solid $blue;
+                background: $gray;
+                color: #212529;
+            }
+            padding: 20px 40px;
+            border-bottom: 1px solid $whitegray;
+            cursor: pointer;
+            &:hover {
+                opacity: 0.7;
+            }
+            .contacts-list-name {
+                justify-content: space-between;
+                display: flex;
+                font-family: 'Montserrat Bold';
+                font-size: 14px;
+                line-height: 26px;
+                position: relative;
+                .unread-count {
+                    background-color: red;
+                    font-family: 'Montserrat Regular';
+                    font-size: 10.5px;
+                    line-height: 16px;
+                    width: 20px;
+                    height: 20px;
+                    border-radius: 50%;
+                    margin: 0;
+                }
+            }
+            .contacts-list-info {
+                display: flex;
+                padding: 10px 0;
+                &-img {
+                    margin-right: 20px;
+                    position: relative;                    
+                    .avatar {
+                        width: 48px;
+                        position: relative;
+                        img {
+                            width: 48px;
+                            height: 48px;
+                            border-radius: 50%;                            
+                        }
+                        i {
+                            right: 2px;
+                        }
+                    }
+                }
+                &-content {
+                    font-size: 13px;
+                    font-family: 'Montserrat Regular';                    
+                }
+            }
+            .constacts-list-footer {
+                display: flex;
+                justify-content: space-between;
+            }
+        }
+    }
+}
+.online{
+    position: absolute;
+    right: 0px;
+    bottom: 2px;
+    height: 10px;
+    background: #2cde09;
+    border: 1px;
+    border-radius: 81%;
+    width: 10px;
+
+}
+.status{
+    font-size: 10px;
+}
+
+.black-highlight{
+    background:  #383838;
+    color: white;
+}
+@media only screen and (max-width: 479px) {
+  .contact-name{
+    margin-left: 68px;
+  }
+  .contacts-list-info-img{
+      margin-top: -22px;
+      display: table;
+  }
+  .online{
+    bottom: 1px;
+  }
+  .contacts-list-info{
+      width: 80%;
+      padding: 0px !important;
+  }
+.constacts-list-footer{
+    position: relative;
+}
+.time{
+    float: right;
+    right: -3px;
+    top: -11px;
+    position: absolute;
+}
+  .status{
+      display: none;
+  }
+  .new-message{
+      padding: 10px !important;
+      font-size: 16px !important;
+  }
+}

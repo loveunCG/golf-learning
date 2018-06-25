@@ -1,0 +1,46 @@
+h1 {
+    font-family: 'Montserrat Black', arial;
+    color: white;
+    font-size: 80px;
+}
+
+h2 {
+    font-family: 'Montserrat Black', arial;
+    color: black;
+    font-size: 28px;
+}
+
+h5 {
+    font-family: 'Montserrat Bold', arial;
+    font-size: 18px;
+}
+
+p {
+    font-family: 'Montserrat Light', arial;
+    font-size: 15px;
+}
+
+@media (max-width: 1440px) {
+    h1 { font-size: 60px; }
+    h2 { font-size: 30px; }
+}
+
+@media (max-width: 1200px) {
+    h1 { font-size: 50px; }
+    h2 { font-size: 26px; }
+}
+
+@media (max-width: 992px) {
+    h1 { font-size: 44px; }
+    h2 { font-size: 25px; }
+}
+
+@media (max-width: 768px) {
+    h1 { font-size: 38px; }
+    h2 { font-size: 24px; }
+}
+
+@media (max-width: 576px) {
+    h1 { font-size: 35px; }
+    h2 { font-size: 24px; }
+}

@@ -1,0 +1,114 @@
+<div class="chat-panel">
+  <div class="chat-panel-topbar" *ngIf="selectedContact">
+    <!-- <div class="add-plus">
+            <i class="la la-plus"></i>
+        </div> -->
+    <ul class="avatar-list">
+      <li>
+        <span class=" plus-sign">
+          <i class="fa fa-plus plus-icon"></i>
+        </span>
+
+      </li>
+      <li>
+        <span class=" avatar avatar-online">
+          <!-- <img alt="avatar" [src]="selectedContact?.image ? avatarUrl + selectedContact?.image : '/assets/learning/images/portrait/small/avatar-s-19.png'"> -->
+          <img alt="avatar" [src]="'/assets/images/admin/default.png'">
+        </span>
+        <span>
+          {{getFirstName(selectedContact?.name)}}
+
+        </span>
+      </li>
+
+      <!-- <li>
+                <span class=" avatar avatar-online">
+                    <img alt="avatar" src="/assets/learning/images/portrait/small/avatar-s-19.png">
+                </span>
+            </li>
+            <li>
+                <span class=" avatar avatar-online">
+                    <img alt="avatar" src="/assets/learning/images/portrait/small/avatar-s-19.png">
+                </span>
+            </li>             -->
+    </ul>
+    <!-- <span class="chat-panel-topbar-name">
+            {{selectedContact?.name}}
+        </span> -->
+  </div>
+  <div class="chat-message-list" #chatMessages *ngIf="selectedContact">
+    <div class="chat-message-list-item" *ngFor="let message of messages">
+      <div class="chat-message-list-item-info" [class.row-reverse]="message.sender == currentUser.id">
+        <span class="chat-message-list-item-info-img avatar avatar-online">
+          <!-- <img *ngIf="message.sender != currentUser.id" alt="" [src]="selectedContact?.image ? avatarUrl + selectedContact?.image : '/assets/learning/images/portrait/small/avatar-s-19.png'">                     -->
+          <img *ngIf="message.sender != currentUser.id" alt="" [src]="'/assets/images/admin/default.png'">
+          <!-- <img *ngIf="message.sender == currentUser.id" alt="" [src]="currentUser?.image ? avatarUrl + currentUser?.image : '/assets/learning/images/portrait/small/avatar-s-19.png'"> -->
+          <img *ngIf="message.sender == currentUser.id" alt="" [src]="'/assets/images/admin/default.png'">
+          <span class="online">
+            &nbsp;
+          </span>
+          <i></i>
+        </span>
+        <div class="chat-message-list-item-info-wrapper d-flex flex-column">
+          <div class="chat-message-list-item-info-name">
+            <span *ngIf="message.sender != currentUser.id">{{selectedContact.name}}</span>
+            <span *ngIf="message.sender == currentUser.id">{{currentUser.name}}</span>
+          </div>
+          <div *ngIf="message.type == 0" class="chat-message-list-item-info-text">{{message.message}}</div>
+          <div *ngIf="message.type == 1" class="chat-message-list-item-info-text">
+            <img [src]="message.message">
+          </div>
+          <div class="chat-message-list-item-time-wrapper">
+            <span class="time-left" *ngIf="message.sender != currentUser.id">
+              {{message.created_at | date: 'EEEE, LLLL dd, yyyy HH:mm'}}
+            </span>
+            <span class="time-right" *ngIf="message.sender == currentUser.id">
+                {{message.created_at | date: 'EEEE, LLLL dd, yyyy HH:mm'}}
+              </span>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+  <div class="chat-panel-footer" *ngIf="selectedContact">
+    <div class="message-text-wrapper">
+      <input type="text" name="message" placeholder="Type Message ..." class="message-text" (keydown.enter)="onEnter($event)" [(ngModel)]="draftMessage"
+      />
+      <input type="file" name="file" accept="image/*" #uploadAnyFile (change)="handleInputChange($event)" style="display:none">
+      <span class="send-photo" (click)="triggerUploadFile()">
+        <i class="fas fa-paperclip"></i>
+      </span>
+    </div>
+    <button class="send-message" (click)="onEnter($event)">
+      <i class="fas fa-paper-plane"></i>
+    </button>
+  </div>
+</div>
+<div class="chat-right-sidebar-wrapper">
+  <div class="promotions-wrapper">
+    <ul class="promotions">
+      <li [ngClass]="{'active': selectedPromo==='All'}" (click)="selectPromo('All')">All</li>
+      <li [ngClass]="{'active': selectedPromo==='Clothing'}" (click)="selectPromo('Clothing')">Clothing</li>
+      <li [ngClass]="{'active': selectedPromo==='Rounds'}" (click)="selectPromo('Rounds')">Rounds</li>
+      <li [ngClass]="{'active': selectedPromo==='Clubs'}" (click)="selectPromo('Clubs')">Clubs</li>
+    </ul>
+  </div>
+  <div class="pxg-wrapper">
+    <div class="pxg-content-item">
+      <span class="pxg-content-item-img avatar">
+        <img alt="avatar" src="/assets/learning/images/portrait/small/avatar-s-19.png">
+      </span>
+      <div class="pxg-content-item-content">
+        <span class="pxg-content-item-content-title">
+          PXG
+        </span>
+        <div class="pxg-content-item-content-text">
+          New bags available at
+          <a>www.pxg.com/golf-bags</a>. If you have any questions let your local fitter contact them directly by phone or email.
+        </div>
+      </div>
+
+    </div>
+  </div>
+</div>

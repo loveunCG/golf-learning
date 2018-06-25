@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="23px" height="25px" viewBox="0 0 23 25" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 47 (45396) - http://www.bohemiancoding.com/sketch -->
+    <title>Logout</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Timeline" transform="translate(-25.000000, -976.000000)" stroke="#FFFFFF">
+            <g id="Menu" transform="translate(0.000000, 71.000000)">
+                <g id="8" transform="translate(0.000000, 881.000000)">
+                    <g id="Logout" transform="translate(26.000000, 24.000000)">
+                        <g>
+                            <path d="M14.7514213,4.63562553 C18.1144851,6.30643404 20.425634,9.77673191 20.425634,13.7872851 C20.425634,19.4272851 15.8533787,24.0000511 10.2128681,24.0000511 C4.57286809,24.0000511 0.00010212766,19.4272851 0.00010212766,13.7872851 C0.00010212766,9.77724255 2.31125106,6.30694468 5.67380426,4.63562553" id="Stroke-1" stroke-width="2"></path>
+                            <path d="M10.2130213,0 L10.2130213,10.212766" id="Stroke-3" stroke-width="2"></path>
+                        </g>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

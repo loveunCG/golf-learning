@@ -1,0 +1,86 @@
+/**
+* -----------------------------------------------------------------------
+*                                Variables
+* -----------------------------------------------------------------------
+*/
+$red: rgb(255, 0, 0);
+$green: #39915D;
+$green-2:#48943F;
+$blue: #0691ff;
+$blue-dark: #10729c;
+$orange: #A35832;
+$violet: #5D45A3;
+$golden: #A88738;
+$white: #ffffff;
+$whitegray: #e4e4e4;
+$gray-dark: #949494;
+$black-light: #383838;
+$gray: #f5f5f5;
+$gray1: #d7d7d7;
+/*
+* -----------------------------------------------------------------------
+*                               Media Queries
+* -----------------------------------------------------------------------
+*/
+// Extra small screen / phone
+$screen-xs: 480px;
+// Small screen / tablet
+$screen-sm: 768px;
+// Medium screen / desktop
+$screen-md: 992px;
+// Large screen / wide desktop
+$screen-lg: 1280px;
+// So media queries don't overlap when required, provide a maximum
+$screen-xs-max: ($screen-sm - 1);
+$screen-sm-max: ($screen-md - 1);
+$screen-md-max: ($screen-lg - 1);
+/**
+* -----------------------------------------------------------------------
+*                               respond-to()
+* -----------------------------------------------------------------------
+*/
+@mixin respond-to($media) {
+   @if $media == mobile{
+    @media (max-width: $screen-xs-max) {
+       @content
+    }
+  }
+  @else if $media == tablet {
+     @media (min-width: $screen-sm) and (max-width: $screen-sm-max){
+      @content
+    }
+  }
+  @else if $media == laptop {
+     @media (min-width: $screen-md) and (max-width: $screen-md-max){
+      @content
+    }
+  }
+  @else if $media == desktop {
+     @media (min-width: $screen-lg){
+      @content
+    }
+  }
+  @else if $media == laptop-up {
+     @media (min-width: $screen-md) and (max-width: $screen-lg){
+      @content
+    }
+  }
+  @else if $media == tablet-down {
+     @media (max-width: $screen-sm-max){
+      @content
+    }
+  }
+  @else {
+     @media (max-width: $media + px){
+      @content;
+    }
+  }
+}
+
+/**
+* -----------------------------------------------------------------------
+*                                Import
+* -----------------------------------------------------------------------
+*/
+@import "font";
+@import "base";

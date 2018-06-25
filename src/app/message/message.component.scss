@@ -1,0 +1,108 @@
+@import "~styles/variables";
+:host() {
+  .chat-content {
+    display: flex;
+    flex-direction: column;
+    .chat-header-wrapper {
+      display: flex;
+      align-items: center;
+      padding: 43px 0px 50px;
+      h4 {
+        font-family: 'Montserrat ExtraBold';
+        font-size: 18px;
+        margin: 0;
+        line-height: 32px;
+        color: inherit;
+      }
+      @include respond-to(mobile) {
+        flex-direction: column;
+      }
+      .chat-panel-topbar-nav {
+        display: flex;
+        list-style: none;
+        font-family: 'Montserrat Regular';
+        font-size: 18px;
+        margin: 0;
+        align-items: center;
+        cursor: pointer;
+        @include respond-to(mobile) {
+          flex-direction: column;
+          padding-left: 0;
+        }
+        li {
+          margin: 0px 60px;
+          border-bottom: 4px solid transparent;
+          &:hover {
+            border-bottom: 4px solid $blue;
+          }
+        }
+      }
+    }
+    .chat-body-wrapper {
+      display: flex;
+      .chat-contacts-wrapper {
+        flex: 0 0 360px;
+        @include respond-to(mobile) {
+          flex: 0 0 100%;
+        }
+      }
+      .chat-panel-wrapper {
+        width: 100%;
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 767px) {
+    .desktop-version{
+        display: none !important;
+    }
+}
+@media only screen and (min-width: 768px) {
+    .mobile-version{
+        display: none !important;
+    }
+}
+
+.back{
+    padding: 10px;
+    font-family: 'Montserrat Bold';
+    font-size: 14px;
+    text-align: center;
+    background: $blue;
+    text-transform: uppercase;
+    color: $white;
+    .fa-angle-left {
+       font-size: 20px
+    }
+}
+.back-icon{
+    float: left;
+    margin-top: 5px;
+}
+.avatar {
+    width: 32px;
+    height: 32px;
+    position: relative;
+    margin-right: 10px;
+    img {
+      width: 32px;
+      height: 32px;
+      border-radius: 50%;
+    }
+    i {
+      right: 2px;
+    }
+  }
+
+  .online{
+    position: absolute;
+    right: 4px;
+    bottom: -7px;
+    height: 7px;
+    background: #2cde09;
+    border: 1px;
+    border-radius: 81%;
+    width: 7px;
+
+}

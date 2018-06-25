@@ -1,0 +1,43 @@
+<div class="chat-contacts-search-wrapper">
+    <!-- <i class="ficon ft-search"></i>
+    <input type="search" class="search" placeholder="search user..." (keydown.enter)="onEnter($event)" [(ngModel)]="searchUser"> -->
+    <div class="new-message">
+        <i class="fas fa-plus"></i>
+        New Message
+    </div>
+</div>
+<div class="chat-contacts-list">
+    <div *ngFor="let contact of contacts">
+        <div *ngIf="contact.id != currentUser.id" [class.active]="contact.id == selectedContactId" [ngClass]="{'black-highlight':contact.id===6}" class="chat-contacts-list-item" (click)="selectContact(contact)">
+            <div class="contacts-list-name">
+                <span class="contact-name"><i *ngIf="contact.id===6" class="fa fa-check" style="color:#2c96ea;"></i> {{contact.name}}</span>
+                <span *ngIf="contact.unreads > 0" class="badge badge-info unread-count">{{contact.unreads}}</span>
+            </div>    
+            <div class="contacts-list-info">
+                <div class="contacts-list-info-img">
+                    <span class="avatar avatar-online">
+                        <!-- <img alt="avatar" [src]="contact.image ? avatarUrl + contact.image : '/assets/learning/images/portrait/small/avatar-s-19.png'"> -->
+                        <img alt="avatar" [src]="'/assets/images/admin/default.png'">
+                        <i></i>
+                    </span>
+                    <span class="online">
+                            &nbsp;
+                    </span>
+                </div>
+                <div class="contacts-list-info-content">
+                    {{getPartialMsg(contact.message)}}
+                </div>
+            </div>
+            <div class="constacts-list-footer">
+                <span class="status">
+                    {{contact.unreads > 0 ? 'Undread':'Read'}}
+                </span>
+                <span class="time">
+                    {{getDisplayDate(contact.diff_time)}}
+                    <!-- {{contact.diff_time | date: 'short'}} -->
+                </span>
+            </div>
+        </div>
+    </div>
+
+</div>

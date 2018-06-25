@@ -1,0 +1,148 @@
+.custom_active_menu {
+    display: none;
+    position: absolute;
+    top: 59px;
+    border-radius: 0;
+    border: none;
+    background: #0691ff;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    left: 0;
+    z-index: 9999;
+}
+.custom_second_navigation .nav-item:hover .custom_active_menu {
+    display: inline-block;
+}
+.custom_active_menu ul {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    text-align: left;
+}
+.custom_active_menu ul li {
+    display: inline-block;
+    text-align: center;
+    padding: 0 20px;
+}
+.custom_active_menu ul li a::before {
+    content: attr(data-course);
+    position: absolute;
+    top: 17px;
+    font-size: 11px;
+    left: 0;
+    letter-spacing: 0;
+}
+.custom_active_menu ul li a {
+    font-size: 16px;
+    color: white;
+    text-transform: capitalize;
+    padding: 30px 0 19px 0;
+    display: inline-block;
+    border-bottom: 4px solid transparent;
+    position: relative;
+    letter-spacing: 1px;
+    font-weight: bold;
+}
+.custom_active_menu ul li a.active{
+    text-decoration: none;
+    border-color: #083c4f;
+    color:#083c4f;
+
+}
+.custom_active_menu ul li a:hover{
+    text-decoration: none;
+}
+.single_video_details {
+    width: 100%;
+    display: inline-block;
+    border: 2px solid #a7a7a8;
+    border-radius: 5px;
+    margin-top: 40px;
+}
+.video_header {
+    width: 100%;
+    display: inline-block;
+    background: white;
+    font-size: 0;
+    padding: 6px 15px;
+}
+.video_title {
+    display: inline-block;
+    width: 50%;
+    vertical-align: middle;
+}
+.video_title h3 {
+    margin: 0;
+    text-transform: uppercase;
+    font-weight: bold;
+    font-size: 16px;
+    color: #8b8b8c;
+}
+.video_spacial_icon {
+    width: 50%;
+    display: inline-block;
+    vertical-align: middle;
+    font-size: 16px;
+    text-align: right;
+    color: #8b8b8c;
+}
+.video_spacial_icon p {
+    display: inline-block;
+    margin: 0;
+    text-transform: uppercase;
+    text-align: center;
+    margin-right: 5px;
+    cursor: pointer;
+}
+.video_spacial_icon span {
+    display: block;
+    font-size: 10px;
+    font-weight: bold;
+}
+.video_container {
+    width: 100%;
+    display: inline-block;
+}
+.video_container img {
+    width: 100%;
+    cursor: pointer;
+}
+.video-remaining-info {
+    width: 100%;
+    display: inline-block;
+    background: #fbfbfb;
+    padding: 15px;
+}
+.video-remaining-info h3 {
+    text-transform: uppercase;
+    font-weight: bold;
+    font-size: 16px;
+}
+.custom-vlog_container {
+    width: 100%;
+    display: inline-block;
+    padding: 0px 70px;
+    margin-bottom: 50px;
+}
+.nav-link {
+    width: 100%;
+}
+#player iframe {
+    width: 100%;
+}
+@media only screen and (max-width: 767px) {
+    .custom_second_navigation .nav-item {
+        width: 100% !important;
+        text-align: left !important;
+        padding-left: 20px !important;
+    }
+    .custom_active_menu ul li {
+        display: inline-block !important;
+        width: 100% !important;
+        text-align: left !important;
+    }
+    .custom_second_navigation .nav-item:hover .custom_active_menu {
+        position: unset;
+    }
+}

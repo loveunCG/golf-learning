@@ -1,0 +1,22 @@
+
+/* Control Style */    
+
+input {
+    font-family: 'Montserrat Bold';
+    height: 40px;
+    border: 2px solid $whitegray;
+    border-radius: 6px;
+    padding-left: 10px;
+}
+button {
+    background-color: $blue;
+    border: none;
+    color: #ffffff;
+    border-radius: 6px;
+    padding: 0px 40px;
+    outline: none;
+    cursor: pointer;
+    &:hover, &:focus, &:active {
+        background-color: $blue-dark;
+    }
+}

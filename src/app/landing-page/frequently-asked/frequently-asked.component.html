@@ -1,0 +1,68 @@
+<div class="d-flex flex-column frequently-asked">
+    <div class="p-0 title">
+        <h2>FREQUENTLY ASKED...</h2>
+    </div>
+    <div class="p-0 d-flex flex-wrap questions flex-sm-row">
+        <div class="p-2 d-flex flex-column">
+            <a class="collapsed" data-toggle="collapse" (click)="isQuestion1 = !isQuestion1"
+            [attr.aria-expanded]="!isQuestion1" aria-controls="question1">
+                IS THIS MEMBERSHIP ONLY FOR LOW HANDICAPS?
+                <i class="fa" aria-hidden="true"></i>
+            </a>
+            <div [ngbCollapse]="isQuestion1" id="question1">
+                Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident.
+            </div>
+        </div>
+        <div class="p-2 d-flex flex-column">
+            <a class="collapsed" data-toggle="collapse" (click)="isQuestion2 = !isQuestion2"
+            [attr.aria-expanded]="!isQuestion2" aria-controls="question2">
+                IS THIS THE SAME CONTENT AS THE LAST SITE?
+                <i class="fa"></i>
+            </a>
+            <div [ngbCollapse]="isQuestion2"  id="question2">
+                Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident.
+            </div>
+        </div>
+        <div class="p-2 d-flex flex-column">
+            <a class="collapsed" data-toggle="collapse" (click)="isQuestion3 = !isQuestion3"
+            [attr.aria-expanded]="!isQuestion3" aria-controls="question3">
+                IS THERE GOING TO CONTINUOUS NEW CONTENT?
+                <i class="fa"></i>
+            </a>
+            <div [ngbCollapse]="isQuestion3" id="question3">
+                Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident.
+            </div>
+        </div>
+        <div class="p-2 d-flex flex-column">
+            <a class="collapsed" data-toggle="collapse" (click)="isQuestion4 = !isQuestion4"
+            [attr.aria-expanded]="!isQuestion4" aria-controls="question4">
+                IS THIS PLATFORM OWNED BY GEORGE?
+                <i class="fa"></i>
+            </a>
+            <div [ngbCollapse]="isQuestion4"  id="question4">
+                Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident.
+            </div>
+        </div>
+        <div class="p-2 d-flex flex-column">
+            <a class="collapsed" data-toggle="collapse" (click)="isQuestion5 = !isQuestion5"
+            [attr.aria-expanded]="!isQuestion5" aria-controls="question5">
+                CAN I CANCEL OR FREEZE MY MEMBERSHIP?
+                <i class="fa"></i>
+            </a>
+            <div [ngbCollapse]="isQuestion5" id="question5">
+                Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident.
+            </div>
+        </div>
+        <div class="p-2 d-flex flex-column">
+            <a class="collapsed" data-toggle="collapse" (click)="isQuestion6 = !isQuestion6"
+            [attr.aria-expanded]="!isQuestion6" aria-controls="question6">
+                WHAT IF I WAS A MEMBER TO THE OLD SITE?
+                <i class="fa"></i>
+            </a>
+            <div [ngbCollapse]="isQuestion6" id="question6">
+                Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident.
+            </div>
+        </div>
+    </div>
+</div>
+

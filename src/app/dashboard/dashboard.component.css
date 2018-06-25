@@ -1,0 +1,84 @@
+@media only screen and (max-width: 767px) {
+
+    .userImgContainer {
+        position: relative;
+    }
+
+    .userImgInfo {
+        position: absolute;
+        bottom: -17px;
+        text-align: center;
+        left: 0;
+        right: 0;
+        background: url("/assets/images/user-bg.png");
+        background-size: 75px;
+    }
+    .userImgInfo p {
+        margin: unset;
+    }
+    .userImgInfo-1 {
+        font-size: 26px;
+        font-weight: bold;
+    }
+    .profileContainer {
+        margin: 40px 0;
+    }
+    .profileContainer h4 {
+        margin-left: 18px;
+        font-weight: 600;
+    }
+
+    .statsContainer ul {
+        list-style-type: none;
+        text-align: center;
+        padding: unset;
+        margin: 10px;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+    }
+    .statsContainer ul li {
+        display: inline-block;
+        padding: 10px;
+        text-align: center;
+        width: 33%;
+    }
+    .statsContainer ul li p {
+        margin-bottom: 3px;
+        font-size: 14px;
+    }
+    .statsContainer ul li:nth-child(2) {
+        border-left: 1px solid #ccc;
+        border-right: 1px solid #ccc;
+    }
+    .progressContainer {
+        background: #e2e2e2;
+        padding: 15px 18px;
+        margin: 18px 18px 0 18px;
+        position: relative;
+        padding-right: 40px;
+    }
+    .progressContainer .progress {
+        margin: unset;
+        height: 12px;
+    }
+    .progressContainer .sr-only {
+        position: absolute;
+        padding: 0;
+        font-size: 12px;
+        z-index: 9994;
+        right: 8px;
+        color: black;
+        font-weight: bold;
+        width: unset;
+        height: unset;
+        overflow: unset;
+        clip: unset;
+    }
+
+
+    .userImg {
+        width: 100%;
+        margin: 0 auto;
+    }
+
+}

@@ -1,0 +1,697 @@
+/*
+    Course Open Paeg
+*/
+#player,
+#album {
+    margin: 0 -15px;
+    padding:0px !important;
+}
+.page-title {
+    display: table;
+    vertical-align: middle;
+    margin: 0 auto;
+}
+#album .head {
+    background: #f5f5f5;
+   
+    display: table;
+    width: 100%;
+}
+#album .content {
+    padding: 30px;
+}
+
+/*
+    Forms
+*/
+.datafrms {
+    padding: 70px 20px;
+}
+.metaforms {
+    position: relative;
+}
+.metaforms .bg-white {
+    border-radius: 10px;
+    overflow: hidden;
+    padding: 0 5px;
+    border: 2px solid #000;
+}
+.metaforms .bg-white input,.metaforms .bg-white textarea {
+    border: none !important;
+    box-shadow: none;
+}
+
+.metaforms input,.metaforms textarea {
+    border: 2px solid #4c4c4c;
+    padding: 14px 10px;
+    font-size: 13px;
+    border-radius: 5px;
+    font-weight: 600;
+    color: #000;
+}
+
+.metaforms .form-group {
+    display: block;
+}
+.metaforms textarea {
+    padding: 19px 10px;
+}
+.metaforms input[type="submit"] {
+    width: 100%;
+    border: none;
+    font-size: 14px;
+    font-weight: 700;
+    padding: 12px 0;
+    color: #fff;
+}
+
+.metaforms span.tag {
+    font-size: 8px;
+    text-align: center;
+    float: left;
+    width: 100%;
+    padding: 5px 0 0;
+}
+.white-wrap {
+    background: #fff;
+    border-radius: 10px;
+    border: 2px solid #4c4c4c;
+    overflow: hidden;
+    margin-bottom: 17px;
+}
+.white-wrap input,.white-wrap textarea {
+    border: none;
+    box-shadow: none !important;
+}
+.white-wrap .form-group {
+    margin-bottom: 10px;
+}
+.addplaylist .nav {
+    position: absolute;
+    right: 0;
+    top: 0;
+    height: 100%;
+    display: table;
+}
+
+.addplaylist .nav ul {
+    padding: 0;
+    list-style: none;
+    margin: 0;
+    display: table-cell;
+    vertical-align: middle;
+}
+
+.addplaylist .nav ul li {
+    font-size: 40px;
+    margin: 30px 0 0
+}
+.addplaylist .form-group {
+    position: relative;
+}
+
+.addplaylist .form-group i {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    font-size: 20px;
+}
+/*
+Progress
+*/
+#album .head h5,#album .head circle {
+    display: table-cell;
+    vertical-align: middle;
+}
+#vimeoapi .playlist {
+    background: #fff;
+    border-left: 2px solid #eaeaea;
+}
+#album .head h5 {
+    font-size: 24px;
+    font-weight: 900;
+    color: #4c4c4c;
+}
+
+#album .head h5 span {
+    float: left;
+    width: 100%;
+    font-size: 12px;
+    font-weight: 800;
+    opacity: 0.6;
+}
+.circle {
+    position: relative;
+    text-align: center;
+    display: table;
+}
+.circle strong {
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    height: 100%;
+    display: table-cell;
+    vertical-align: middle;
+    padding: 19px 0;
+    font-size: 13px;
+    background: #fff;
+    border-radius: 100%;
+}
+.circle canvas {
+    position: relative;
+    z-index: 99;
+}
+.tabs .nav-tabs {
+    border: none;
+    display: inline-block;
+    text-align: center;
+    width: 100%;
+}
+.tabs .nav-tabs li {
+    display: inline-block;
+    margin: 0px -2px;
+}
+#album .tabs .nav-tabs li {
+    width: 33%;
+}
+.tabs .nav-tabs li a.active {
+    border-color: #0691ff;
+}
+.tabs .nav-tabs li a {
+    color: #4c4c4c;
+    font-size: 12px;
+    padding: 0 15px 16px;
+    display: block;
+    border-bottom: 5px solid;
+    text-decoration: none;
+    font-weight: 800;
+}
+#album .tab-content .title {
+    background: #f5f5f5;
+    border: 1px solid #eaeaea;
+}
+
+#album .tab-content .title .content {
+    padding-top: 18px;
+    padding-bottom: 18px;
+}
+
+#album .tab-content .title h6 {
+    margin-bottom: 0;
+    font-size: 14px;
+    font-weight: 800;
+    color: #4c4c4c;
+}
+.tab-content .elements ul li {
+    font-size: 13px;
+    padding: 10px 0px 10px 60px;
+    position: relative;
+}
+
+.tab-content .elements ul {
+    padding: 0;
+    list-style: none;
+    margin-bottom: 0;
+}
+.tab-content .elements {
+    padding: 30px 0;
+}
+.tab-content .elements ul li input[type="checkbox"] {
+    position: absolute;
+    right: 0;
+    width: 35px;
+    height: 35px;
+    top: 0;
+    z-index: 1;
+    opacity: 0;
+    cursor: pointer;
+}
+.tab-content .elements ul li .fa-plus {
+    position: absolute;
+    right: 0;
+    background: #0691ff;
+    color: #fff;
+    width: 35px;
+    height: 35px;
+    display: table;
+    top: 2px;
+    text-align: center;
+    opacity: 0;
+  
+
+}
+.tab-content .elements ul li:hover {
+    background: #fafafa;
+}
+.tab-content .elements ul li a {
+    width: 100%;
+    display: inline-block;
+    color: #000;
+}
+.tab-content .elements ul li:hover .fa-plus {
+    opacity: 1;
+}
+.tab-content .elements ul li .fa-plus:before {
+    display: table-cell;
+    vertical-align: middle;
+}
+.tab-content .elements ul li .checked {
+    position: absolute;
+    left: 30px;
+    width: 20px;
+    height: 20px;
+    border-radius: 100%;
+    background: #fff;
+    content: "";
+    border: 1px solid #0691ff;
+    font-size: 10px;
+}
+.tab-content .elements ul li input[type="checkbox"]:checked + i.checked:before {
+    content: "\f00c";
+    display: table-cell;
+    vertical-align: middle;
+    height: 100%;
+    padding: 4px 4px;
+}
+
+.tab-content .elements ul li input[type="checkbox"]:checked + i.checked {
+    background: #0691ff;
+    color: #fff;
+}
+/*
+Reviews
+*/
+#album .reviews .content p {
+    margin-bottom: 0;
+    font-size: 12px;
+    line-height: 20px;
+}
+/*
+Glosary
+*/
+#GLOSSARY #accordion {
+    display: inline-block;
+    width: 100%;
+}
+
+#GLOSSARY #accordion .item {
+    float: left;
+    width: 100%;
+}
+
+#GLOSSARY #accordion .item a.expand {
+    width: 100%;
+    display: block;
+    padding: 5px 0;
+    font-weight: 600;
+    cursor: pointer;
+}
+#GLOSSARY #accordion .item a.expand i {
+    float: right;
+    font-size: 20px;
+}
+#GLOSSARY #accordion .item a.expand i {
+    float: right;
+    font-size: 20px;
+}
+
+#GLOSSARY #accordion .item a.expand[aria-expanded="true"] .fa-angle-right:before {
+    content: "\f107";
+}
+.show .card-body p,
+#GLOSSARY #accordion .item a.expand[aria-expanded="true"] {
+    color: #0691ff;
+
+}
+/*
+Player
+*/
+#player iframe {
+    width: 100%;
+    background: #000;
+}
+
+/*
+Skills Page
+*/
+.tabs h5 {
+    float: left;
+    margin: 0;
+    font-weight: 900;
+    font-size: 18px;
+    margin-right: 20px;
+}
+.default .nav.nav-tabs {
+    border: none;
+    width: auto;
+    display: block;
+}
+.default .nav.nav-tabs li {
+    margin:0 2%;
+}
+
+.default .nav.nav-tabs li a {
+    color: #000;
+    font-size: 12px;
+    font-weight: 600;
+    padding: 15px 5px 15px;
+    text-decoration: none;
+    position: relative;
+    text-align: center;
+    display: inline-block;
+}
+
+.default .nav.nav-tabs li a.active,.default .nav.nav-tabs li a:hover {
+    border-bottom: 5px solid #19a4d8;
+}
+.nav.nav-tabs.skills li a:before {
+    content: "";
+}
+.nav.nav-tabs.skills li a i {
+    position: absolute;
+    top: -15px;
+    left: 0;
+    right: 0;
+    font-size: 20px;
+}
+#vimoegalley .item {
+    background: #fbfbfb;
+    border: 2px solid #ebebeb;
+    border-radius: 10px;
+    float: left;
+    width: 100%;
+    overflow: hidden;
+    margin-bottom: 30px;
+    
+}
+div#vimoegalley {
+    margin-bottom: 100px;
+}
+#vimoegalley .item iframe {
+    width: 100%;
+    background: #000;
+}
+
+#vimoegalley .item .body {
+    padding: 30px 30px 0;
+}
+#vimoegalley .item .head {
+    padding: 30px 30px 15px;
+    background: #fff;
+    display: table;
+    width: 100%;
+}
+
+#vimoegalley .item .head span {
+    display: inline-block;
+    width: 50%;
+    font-size: 14px;
+    font-weight: 900;
+    color: #8b8b8c;
+    display: table-cell;
+    vertical-align: middle;
+}
+
+#vimoegalley .item .head span.right {
+    text-align: right;
+}
+
+#vimoegalley .item .head span i {margin: 0 0 5px;}
+#vimoegalley .item .head span.right a {
+    font-size: 10px;
+    position: relative;
+    text-align: center;
+    margin: 0 10px;
+    color: #8b8b8c;
+    font-weight: 600;
+    text-decoration: none;
+    display: inline-grid;
+}
+#vimoegalley .item .head span.right a:last-child {
+    margin-right: 0;
+}
+#vimoegalley .item .head span.right i {
+    font-size: 15px;
+}
+/*
+Vimoe Responsive
+*/
+.tabs.mobile-forms {
+    margin-bottom: 50px;
+}
+
+.datafrms .close {
+    position: absolute;
+    bottom: 0;
+    background: #0691ff;
+    width: 100%;
+    left: 0;
+    padding: 20px;
+    opacity: 1;
+    text-align: center;
+    color: #fff;
+    text-transform: uppercase;
+    font-weight: 800;
+}
+ 
+.datafrms .close i {
+    margin-right: 15px;
+}
+/*
+Forum CSS
+*/
+.top-nav .navbar-nav .forum .dropdown-menu a {
+    padding-left: 20px !important;
+    padding-right: 20px !important;
+}
+#all-forums #sidebar {
+    background: #ebebeb;
+    padding: 0 30px;
+    height: 100%;
+}
+#all-forums #sidebar ul li {
+    display: table;
+    width: 100%;
+    padding: 0 0 30px;
+}
+#all-forums #sidebar ul {
+    margin: 0;
+    list-style: none;
+    padding: 0;
+}
+#all-forums .content {
+    padding-top: 80px;
+}
+#all-forums #sidebar ul li .infor {
+    display: table-cell;
+    vertical-align: middle;
+    font-weight: 500;
+}
+#all-forums #sidebar .avtar {
+    display: table-cell;
+    width: 50px;
+}
+#all-forums #sidebar ul li .infor p {
+    margin-bottom: 0;
+    color: #000;
+  
+}
+#all-forums #sidebar ul li a {
+    color: #0691ff;
+}
+.block {
+    display: inline-block;
+}
+.row.inline {
+    text-align: center;
+    display: inline-block;
+    width: 100%;
+}
+.forum .head {
+    position: relative;
+    display: table;
+    width: 100%;
+
+}
+.forum .title {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    text-align: center;
+    height: 100%;
+}
+
+.forum .title h2 {
+    display: table;
+    vertical-align: middle;
+    height: 100%;
+    width: 100%;
+    color: #fff;
+    font-size: 50px;
+    font-weight: 800;
+}
+
+.forum .title h2 span {
+    display: table-cell;
+    vertical-align: middle;
+}
+.content .forum {
+    background: #fafafa;
+    border-radius: 10px;
+    overflow: hidden;
+    margin-bottom: 5%;
+    box-shadow: 0px 0px 10px -4px #000;
+}
+.content .forum .body {
+    padding: 30px 22px 22px;
+}
+
+.content .forum .body ul.status {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: inline-block;
+    width: 100%;
+    border-radius: 8px;
+    border: 1px solid #e2e2e2;
+}
+
+.content .forum .body ul.status li {
+    font-size: 10px;
+    width: 33.3%;
+    float: left;
+    color: #000;
+    font-weight: 600;
+    padding: 5px 0;
+    text-align: center;
+}
+.content .forum .body ul li span {
+    float: left;
+    width: 100%;
+    color: #0691ff;
+    font-size: 25px;
+    font-weight: 800;
+    line-height: normal;
+}
+
+.content .forum .body ul.status li:first-child {
+    border-right: 1px solid #e2e2e2;
+}
+
+.content .forum .body ul.status li:last-child {
+    border-left: 1px solid #e2e2e2;
+}
+.content .forum .body .links {
+    display: table;
+    width: 100%;
+    margin-top: 30px;
+}
+
+.content .forum .body .links > div {
+    display: table-cell;
+    vertical-align: middle;
+    width: 50%;
+}
+
+.content .forum .body .links .members ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    float: left;
+}
+
+.content .forum .body .links .members ul li {
+    display: inline-block;
+}
+.content .forum .body .links a.opencourse {
+    width: 100%;
+    background: #083c4f;
+    color: #fff;
+    padding: 12px 0;
+    border-radius: 7px;
+    font-size: 13px;
+}
+@media (min-width: 1200px) {
+    .container-responsive .container {
+        width: 90%;
+        max-width: 100%;
+    }
+    .metaforms {
+        padding-right: 12%;
+    }
+    .page-title { 
+        width: 100%;
+    }
+    #circlemobile {
+        display: none;
+    }
+    #album .head h5 {
+        text-transform: uppercase;
+    }
+    .tabs.mobile-forms,
+    .datafrms .close,
+    #all-forums .tabs {
+        display: none;
+    }
+}
+@media (min-width: 1600px) {
+    .page-header.bg .row .vl-m {
+        padding: 0px 8%;
+    }
+}
+@media (max-width: 1199px) {
+    #vimeoapi .player {
+        display: none;
+        position: absolute;
+        top: 0;
+        z-index: 100;
+        background: #fff;
+    }
+    #album .head h5 {
+        color: #fff;
+        font-size: 40px;
+    }
+    #album .head h5 span {
+        opacity: 0;
+    }
+    #album .head {
+        background: #0691ff
+    }
+    #circle {
+        display: none;
+    }
+    .metaforms.addplaylist {
+        padding-right: 12%;
+    }
+    .circle.mobile strong {
+        background: transparent;
+        color: #fff;
+        position: relative;
+        left: -50%;
+    }
+    .datafrms .tab {
+        display: none;
+    }
+    .datafrms .tab.active {
+        display: block;
+    }
+    .datafrms {
+        padding: 50px 20px 100px;
+    }
+}
+@media (max-width: 991px) {
+    .navbar-toggler {
+        display: table-cell;
+    }
+}
+@media (max-width: 576px) {
+    .profile div {
+        padding: 0 10px;
+    }
+    .navbar-toggler {
+        margin-left: 10px;
+    }
+}
+

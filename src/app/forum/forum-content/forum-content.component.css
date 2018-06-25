@@ -1,0 +1,119 @@
+@import url('https://fonts.googleapis.com/css?family=Montserrat:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i');
+
+.content {
+    padding-top: 80px;
+}
+.block {
+    display: inline-block;
+}
+.row.inline {
+    text-align: center;
+    display: inline-block;
+    width: 100%;
+}
+.forum .head {
+    position: relative;
+    display: table;
+    width: 100%;
+
+}
+.forum .title {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    text-align: center;
+    height: 100%;
+}
+
+.forum .title h2 {
+    display: table;
+    vertical-align: middle;
+    height: 100%;
+    width: 100%;
+    color: #fff;
+    font-size: 50px;
+    font-weight: 800;
+}
+
+.forum .title h2 span {
+    display: table-cell;
+    vertical-align: middle;
+}
+.content .forum {
+    background: #fafafa;
+    border-radius: 10px;
+    overflow: hidden;
+    margin-bottom: 5%;
+    box-shadow: 0px 0px 10px -4px #000;
+}
+.content .forum .body {
+    padding: 30px 22px 22px;
+    white-space: normal;
+}
+
+.content .forum .body ul.status {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: inline-block;
+    width: 100%;
+    border-radius: 8px;
+    border: 1px solid #e2e2e2;
+}
+
+.content .forum .body ul.status li {
+    font-size: 10px;
+    width: 33.3%;
+    float: left;
+    color: #000;
+    font-weight: 600;
+    padding: 5px 0;
+    text-align: center;
+}
+.content .forum .body ul li span {
+    float: left;
+    width: 100%;
+    color: #0691ff;
+    font-size: 25px;
+    font-weight: 800;
+    line-height: normal;
+}
+
+.content .forum .body ul.status li:first-child {
+    border-right: 1px solid #e2e2e2;
+}
+
+.content .forum .body ul.status li:last-child {
+    border-left: 1px solid #e2e2e2;
+}
+.content .forum .body .links {
+    display: table;
+    width: 100%;
+    margin-top: 30px;
+}
+
+.content .forum .body .links > div {
+    display: table-cell;
+    vertical-align: middle;
+    width: 50%;
+}
+
+.content .forum .body .links .members ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    float: left;
+}
+
+.content .forum .body .links .members ul li {
+    display: inline-block;
+}
+.content .forum .body .links a.opencourse {
+    width: 100%;
+    background: #083c4f;
+    color: #fff;
+    padding: 12px 0;
+    border-radius: 7px;
+    font-size: 13px;
+}

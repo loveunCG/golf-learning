@@ -1,0 +1,116 @@
+.footer {
+    padding: 150px 100px;
+    background-color: #083c4f;
+    color: #FFFFFF;
+
+    & div {
+        margin-bottom: 30px;
+
+        &.title {
+            margin-bottom: 50px;
+
+            & .logo {
+                margin-bottom: 10px;
+                & img {
+                    height: 90%;
+                }
+            }
+
+            & p {
+                font-family: 'Myriad Pro Light';
+                font-size: 14px;
+                margin-bottom: 35px;
+            }
+        }
+
+        h5 {
+            margin-bottom: 30px;
+            font-size: 1.2em;
+            font-weight: bolder;
+        }
+
+        p {
+            font-size: 14px;
+        }
+    }
+}
+
+@media (max-width: 1200px) {
+    .footer {
+      padding: 50px;
+
+      & div {
+        &.more{
+          display: none;
+        }
+        margin-bottom: 30px;
+        text-align: center;
+        &.title {
+            margin-bottom: 50px;
+            & .logo {
+                margin-bottom: 10px;
+                & img {
+                    height: 20px;
+                }
+            }
+
+            & p {
+                font-family: 'Myriad Pro Light';
+                font-size: .8em;
+                margin-bottom: 15px;
+            }
+        }
+
+
+        h5 {
+            margin-bottom: 20px;
+            font-size: 1em;
+            font-weight: bolder;
+        }
+
+        p {
+            font-size: .8em;
+        }
+    }
+  }
+}
+
+@media (max-width: 576px) {
+    .footer {
+        padding: 150px 0px;
+
+        & div {
+          &.more{
+            display: none;
+          }
+          margin-bottom: 30px;
+          text-align: center;
+          &.title {
+              margin-bottom: 50px;
+              & .logo {
+                  margin-bottom: 10px;
+                  & img {
+                      height: 20px;
+                  }
+              }
+
+              & p {
+                  font-family: 'Myriad Pro Light';
+                  font-size: .8em;
+                  margin-bottom: 15px;
+              }
+          }
+
+
+          h5 {
+              margin-bottom: 20px;
+              font-size: 1em;
+              font-weight: bolder;
+          }
+
+          p {
+              font-size: .8em;
+          }
+      }
+    }
+}

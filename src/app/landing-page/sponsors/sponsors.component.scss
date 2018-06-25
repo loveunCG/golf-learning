@@ -1,0 +1,29 @@
+.marks {
+    background-color: #234558;
+    z-index: 1;
+
+    & .title {
+        padding: 25px !important;
+        height: 80px;
+        font-family: 'Myriad Pro Regular';
+        font-size: 15px;
+        color: #FFFFFF;
+        line-height: 30px;
+        text-align: center;
+    }
+
+    & .logos {
+        & img {
+            margin: 25px;
+            height: 30px;
+        }
+    }
+}
+
+@media (max-width: 576px) {
+    .marks {
+        padding-top: 175px;
+        margin-top: -275px;
+        position: relative;
+    }
+}

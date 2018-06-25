@@ -1,0 +1,29 @@
+## Golf Angular
+## Development server
+npm install
+ng serve
+
+## Build
+ng build
+
+## Node version 
+8.9.4
+
+## Node 8.11.1 version install
+curl -sL https://deb.nodesource.com/setup_8.x | sudo -E bash -
+sudo apt-get install -y nodejs
+
+## nvm install
+curl -o- https://raw.githubusercontent.com/creationix/nvm/v0.33.11/install.sh | bash
+
+## node 8.9.4 install
+nvm install 8.9.4
+nvm use 8.9.4
+
+## installation problem (node-sass is not working on node 8.11.1)
+cd node_modules/node-sass
+npm install
+node scripts/build -f
+
+## Copy dist directory to delopy directoy
+cp dist /var/www/html

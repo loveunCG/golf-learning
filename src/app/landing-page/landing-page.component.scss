@@ -1,0 +1,68 @@
+//@import url('/assets/home/lib/font-awesome/css/font-awesome.min.css');
+//@import url('/assets/home/lib/bootstrap/css/bootstrap.min.css');
+
+.ball-background-image {
+    background-image: url("/assets/images/home/ball-background.png");
+    background-size: cover;
+    z-index: inherit;
+}
+
+@font-face {
+    font-family: 'Bebas Neue Book';
+    src: url('/assets/fonts/BebasNeue Book.ttf');
+}
+
+@font-face {
+    font-family: 'Bebas Neue Regular';
+    src: url('/assets/fonts/BebasNeue-Regular.ttf');
+}
+
+@font-face {
+    font-family: 'Montserrat Black';
+    src: url('/assets/fonts/Montserrat Black.ttf');
+}
+
+@font-face {
+    font-family: 'Montserrat Bold';
+    src: url('/assets/fonts/Montserrat Bold.ttf');
+}
+
+@font-face {
+    font-family: 'Montserrat ExtraBold';
+    src: url('/assets/fonts/Montserrat ExtraBold.ttf');
+}
+
+@font-face {
+    font-family: 'Montserrat Light';
+    src: url('/assets/fonts/Montserrat Light.ttf');
+}
+
+@font-face {
+    font-family: 'Montserrat Regular';
+    src: url('/assets/fonts/Montserrat Regular.ttf');
+}
+
+@font-face {
+    font-family: 'Myriad Pro Bold';
+    src: url('/assets/fonts/Myriad Pro Bold.ttf');
+}
+
+@font-face {
+    font-family: 'Myriad Pro Light';
+    src: url('/assets/fonts/Myriad Pro Light.ttf');
+}
+
+@font-face {
+    font-family: 'Myriad Pro Regular';
+    src: url('/assets/fonts/Myriad Pro Regular.ttf');
+}
+
+@font-face {
+    font-family: 'Myriad Pro Semibold';
+    src: url('/assets/fonts/Myriad Pro Semibold.ttf');
+}
+
+@font-face {
+    font-family: 'Brandon Grotesque Light';
+    src: url('/assets/fonts/Brandon Grotesque-Light.ttf');
+}

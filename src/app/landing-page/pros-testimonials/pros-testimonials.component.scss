@@ -1,0 +1,29 @@
+.pros-testimonials {
+    height: 916px;
+    font-family: 'Montserrat Light', arial;
+    font-size: 54px;
+    color: #383838;
+    line-height: 1;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+
+    b {
+        font-family: 'Montserrat Bold', arial;
+    }
+
+    img {
+        width: 300px;
+    }
+}
+
+@media (max-width: 540px) {
+    .pros-testimonials {
+        height: 300px;
+        font-size: 16px;
+        img {
+          width: 150px;
+        }
+    }
+}

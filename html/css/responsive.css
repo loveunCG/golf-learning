@@ -1,0 +1,130 @@
+@media (min-width: 1200px) {
+    .container-responsive .container {
+        width: 90%;
+        max-width: 100%;
+    }
+    .metaforms {
+        padding-right: 12%;
+    }
+    .page-title { 
+        width: 100%;
+    }
+    #circlemobile {
+        display: none;
+    }
+    #album .head h5 {
+        text-transform: uppercase;
+    }
+    .tabs.mobile-forms,
+    .datafrms .close,
+    #all-forums .tabs {
+        display: none;
+    }
+}
+@media (min-width: 1600px) {
+    .page-header.bg .row .vl-m {
+        padding: 0px 8%;
+    }
+}
+@media (max-width: 1199px) {
+    #vimeoapi .player {
+        display: none;
+        position: absolute;
+        top: 0;
+        z-index: 100;
+        background: #fff;
+    }
+    #album .head h5 {
+        color: #fff;
+        font-size: 40px;
+    }
+    #album .head h5 span {
+        opacity: 0;
+    }
+    #album .head {
+        background: #0691ff
+    }
+    #circle {
+        display: none;
+    }
+    .metaforms.addplaylist {
+        padding-right: 12%;
+    }
+    .circle.mobile strong {
+        background: transparent;
+        color: #fff;
+        position: relative;
+        left: -50%;
+    }
+    .datafrms .tab {
+        display: none;
+    }
+    .datafrms .tab.active {
+        display: block;
+    }
+    .datafrms {
+        padding: 50px 20px 100px;
+    }
+    #all-forums .tab {
+        display: none;
+    }
+    #all-forums .content {
+        padding-top: 50px;  
+    }
+    #all-forums .tab.show {
+        display: block;
+
+    }
+    #all-forums #forums .content {
+        overflow: auto;
+        white-space: nowrap;
+    }
+    #activity {
+        width: 80%;
+        margin: 0px auto;
+        max-width: 100%;
+        flex: inherit;
+    }
+    #all-forums #sidebar {
+        background: none;
+        padding: 0;
+    }
+    #all-forums .tabs .nav-tabs li {
+        width: 50%;
+    }
+    .content .forum {
+        background: #fff;
+    }
+    #forums .block {
+        width: 60%;
+        float: none;
+        max-width: 100%;
+    }
+    #all-forums .tabs {
+        width: 80%;
+        margin: 0 auto;
+    }
+}
+@media (max-width: 991px) {
+    .navbar-toggler {
+        display: table-cell;
+    }
+}
+@media (max-width: 768px) {
+   
+   
+}
+@media (max-width: 576px) {
+    .profile div {
+        padding: 0 10px;
+    }
+    .navbar-toggler {
+        margin-left: 10px;
+    }
+    .forum .title h2 {
+        font-size: 30px;
+    }
+    #forums .block {
+        width: 500px;
+    }
+}

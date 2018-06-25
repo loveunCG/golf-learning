@@ -1,0 +1,317 @@
+/*
+    Forms
+*/
+:host() {
+    font-family: Montserrat;
+}
+
+
+.datafrms {
+    padding: 70px 20px;
+}
+.metaforms {
+    position: relative;
+}
+.metaforms .bg-white {
+    border-radius: 10px;
+    overflow: hidden;
+    padding: 0 5px;
+    border: 2px solid #000;
+}
+.metaforms .bg-white input,.metaforms .bg-white textarea {
+    border: none !important;
+    box-shadow: none;
+}
+
+.metaforms input::placeholder,
+.metaforms textarea::placeholder {
+    color: #b7b7b7;
+}
+
+.metaforms input,.metaforms textarea {
+    border: 2px solid #4c4c4c;
+    padding: 14px 30px;
+    font-size: 13px;
+    border-radius: 5px;
+    font-weight: 600;
+    color: #000;
+}
+
+.metaforms .form-group {
+    display: block;
+}
+.metaforms textarea {
+    padding: 19px 30px;
+}
+
+.metaforms.addplaylist input {
+    padding: 14px 19px;
+}
+
+.metaforms input[type="submit"] {
+    width: 100%;
+    border: none;
+    font-size: 14px;
+    font-weight: 700;
+    padding: 12px 0;
+    color: #fff;
+}
+
+.metaforms span.tag {
+    font-size: 8px;
+    text-align: center;
+    float: left;
+    width: 100%;
+    padding: 5px 0 0;
+}
+
+.metaforms span.tag .upgrade {
+    color: #0691ff;
+    font-weight: 600;
+}
+
+.white-wrap {
+    background: #fff;
+    border-radius: 10px;
+    border: 2px solid #4c4c4c;
+    overflow: hidden;
+    margin-bottom: 17px;
+}
+.white-wrap input,.white-wrap textarea {
+    border: none;
+    box-shadow: none !important;
+}
+.white-wrap .form-group {
+    margin-bottom: 10px;
+}
+.addplaylist .nav {
+    position: absolute;
+    right: 0;
+    top: 0;
+    height: 100%;
+    display: table;
+}
+
+.addplaylist .nav ul {
+    padding: 0;
+    list-style: none;
+    margin: 0;
+    display: table-cell;
+    vertical-align: middle;
+}
+
+.addplaylist .nav ul li {
+    font-size: 40px;
+    margin: 30px 0 0;
+    cursor: pointer;
+}
+.addplaylist .form-group {
+    position: relative;
+}
+
+.addplaylist .form-group i {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    font-size: 20px;
+}
+/*
+Player
+*/
+#player iframe {
+    width: 100%;
+    background: #000;
+}
+.add-playlist .fa-plus {
+    cursor: pointer;
+}
+.add-playlist .form-control {
+    background: #ffffff;
+}
+.playlist-wrapper {
+    overflow: hidden;
+    height: 118px;
+    margin-bottom: 1rem;
+}
+.playlist-wrapper .playlist-item {
+    background: #ffffff;
+    cursor: pointer;
+    box-shadow: none;
+}
+.playlist-wrapper .playlist-item.active{
+    border-color: #0691ff;
+    color: #0691ff;
+}
+.playlist-wrapper .playlist-item.active + .fa-bars{
+    color: #0691ff;
+}
+.playlistitem-wrapper {
+    border: 1px solid #eaeaea;
+    background: #ffffff;
+}
+.playlistitem-wrapper ul{
+    list-style: none;
+    padding: 0;
+    margin-bottom: 0;
+}
+.playlistitem-wrapper ul li{
+    padding: 0 10px;
+    cursor: pointer;
+    border-bottom: 1px solid #eaeaea;    
+}
+.playlistitem-wrapper ul li:hover{
+    background: #0691ff;
+}
+/* Mobile view */
+.tabs.mobile-forms {
+    padding-bottom: 80px;
+}
+.tabs .nav-tabs li {
+    width: 33%;
+}
+.tabs .nav-tabs li a.active {
+    border-color: #0691ff;
+}
+.tabs .nav-tabs li a {
+    color: #4c4c4c;
+    font-size: 12px;
+    padding: 0 15px 16px;
+    display: block;
+    border-bottom: 5px solid;
+    text-decoration: none;
+    font-weight: 800;
+}
+
+@media (min-width: 1200px) {
+    .container-responsive .container {
+        width: 90%;
+        max-width: 100%;
+    }
+    .metaforms {
+        padding-right: 12%;
+    }
+    .page-title { 
+        width: 100%;
+    }
+    #circlemobile {
+        display: none;
+    }
+    #album .head h5 {
+        text-transform: uppercase;
+    }
+    .tabs.mobile-forms,
+    .datafrms .close,
+    #all-forums .tabs {
+        display: none;
+    }
+}
+@media (min-width: 1600px) {
+    .page-header.bg .row .vl-m {
+        padding: 0px 8%;
+    }
+}
+@media (max-width: 1199px) {
+    #vimeoapi .player {
+        display: none;
+        position: absolute;
+        top: 0;
+        z-index: 100;
+        background: #fff;
+    }
+    #album .head h5 {
+        color: #fff;
+        font-size: 40px;
+    }
+    #album .head h5 span {
+        opacity: 0;
+    }
+    #album .head {
+        background: #0691ff
+    }
+    #circle {
+        display: none;
+    }
+    .metaforms.addplaylist {
+        padding-right: 12%;
+    }
+    .circle.mobile strong {
+        background: transparent;
+        color: #fff;
+        position: relative;
+        left: -50%;
+    }
+    .datafrms .tab {
+        display: none;
+    }
+    .datafrms .tab.active {
+        display: block;
+    }
+    .datafrms {
+        padding: 50px 20px 100px;
+    }
+    #all-forums .tab {
+        display: none;
+    }
+    #all-forums .content {
+        padding-top: 50px;  
+    }
+    #all-forums .tab.show {
+        display: block;
+
+    }
+    #all-forums #forums .content {
+        overflow: auto;
+        white-space: nowrap;
+    }
+    #activity {
+        width: 80%;
+        margin: 0px auto;
+        max-width: 100%;
+        flex: inherit;
+    }
+    #all-forums #sidebar {
+        background: none;
+        padding: 0;
+    }
+    #all-forums .tabs .nav-tabs li {
+        width: 50%;
+    }
+    .content .forum {
+        background: #fff;
+    }
+    #forums .block {
+        width: 60%;
+        float: none;
+        max-width: 100%;
+    }
+    #all-forums .tabs {
+        width: 80%;
+        margin: 0 auto;
+    }
+}
+
+
+@media (max-width: 991px) {
+    .navbar-toggler {
+        display: table-cell;
+    }
+}
+@media (max-width: 768px) {
+   .addplaylist .form-group.add-playlist-button-wrapper {
+        margin-right: -45px;
+   }
+}
+@media (max-width: 576px) {
+    .profile div {
+        padding: 0 10px;
+    }
+    .navbar-toggler {
+        margin-left: 10px;
+    }
+    .forum .title h2 {
+        font-size: 30px;
+    }
+    #forums .block {
+        width: 500px;
+    }
+}

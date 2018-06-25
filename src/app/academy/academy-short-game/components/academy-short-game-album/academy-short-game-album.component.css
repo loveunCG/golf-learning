@@ -1,0 +1,338 @@
+/*
+Progress
+*/
+#album .head h5,#album .head circle {
+    display: table-cell;
+    vertical-align: middle;
+}
+#vimeoapi .playlist {
+    background: #fff;
+    border-left: 2px solid #eaeaea;
+}
+#album .head h5 {
+    font-size: 24px;
+    font-weight: 900;
+    color: #4c4c4c;
+}
+
+#album .head h5 span {
+    float: left;
+    width: 100%;
+    font-size: 12px;
+    font-weight: 800;
+    opacity: 0.6;
+}
+.circle {
+    position: relative;
+    text-align: center;
+    display: table;
+}
+.circle strong {
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    height: 100%;
+    display: table-cell;
+    vertical-align: middle;
+    padding: 19px 0;
+    font-size: 13px;
+    background: #fff;
+    border-radius: 100%;
+}
+.circle canvas {
+    position: relative;
+    z-index: 99;
+}
+.tabs .nav-tabs {
+    border: none;
+    display: inline-block;
+    text-align: center;
+    width: 100%;
+}
+.tabs .nav-tabs li {
+    display: inline-block;
+    margin: 0px -2px;
+}
+#album .tabs .nav-tabs li {
+    width: 33%;
+}
+.tabs .nav-tabs li a.active {
+    border-color: #0691ff;
+}
+.tabs .nav-tabs li a {
+    color: #4c4c4c;
+    font-size: 12px;
+    padding: 0 15px 16px;
+    display: block;
+    border-bottom: 5px solid;
+    text-decoration: none;
+    font-weight: 800;
+}
+#album .tab-content .title {
+    background: #f5f5f5;
+    border: 1px solid #eaeaea;
+}
+
+#album .tab-content .title .content {
+    padding-top: 18px;
+    padding-bottom: 18px;
+}
+
+#album .tab-content .title h6 {
+    margin-bottom: 0;
+    font-size: 14px;
+    font-weight: 800;
+    color: #4c4c4c;
+}
+.tab-content .elements ul li {
+    font-size: 13px;
+    padding: 10px 0px 10px 60px;
+    position: relative;
+}
+
+.tab-content .elements ul {
+    padding: 0;
+    list-style: none;
+    margin-bottom: 0;
+}
+.tab-content .elements {
+    padding: 30px 0;
+}
+.tab-content .elements ul li input[type="checkbox"] {
+    position: absolute;
+    right: 0;
+    width: 35px;
+    height: 35px;
+    top: 0;
+    z-index: 1;
+    opacity: 0;
+    cursor: pointer;
+}
+.tab-content .elements ul li .fa-plus {
+    position: absolute;
+    right: 0;
+    background: #0691ff;
+    color: #fff;
+    width: 35px;
+    height: 35px;
+    display: table;
+    top: 2px;
+    text-align: center;
+    opacity: 0;
+  
+
+}
+.tab-content .elements ul li:hover {
+    background: #fafafa;
+}
+.tab-content .elements ul li a {
+    width: 100%;
+    display: inline-block;
+    color: #000;
+}
+.tab-content .elements ul li:hover .fa-plus {
+    opacity: 1;
+}
+.tab-content .elements ul li .fa-plus:before {
+    display: table-cell;
+    vertical-align: middle;
+}
+.tab-content .elements ul li .checked {
+    position: absolute;
+    left: 30px;
+    width: 20px;
+    height: 20px;
+    border-radius: 100%;
+    background: #fff;
+    content: "";
+    border: 1px solid #0691ff;
+    font-size: 10px;
+}
+.tab-content .elements ul li input[type="checkbox"]:checked + i.checked:before {
+    content: "\f00c";
+    display: table-cell;
+    vertical-align: middle;
+    height: 100%;
+    padding: 4px 4px;
+}
+
+.tab-content .elements ul li input[type="checkbox"]:checked + i.checked {
+    background: #0691ff;
+    color: #fff;
+}
+/*
+Reviews
+*/
+#album .reviews .content p {
+    margin-bottom: 0;
+    font-size: 12px;
+    line-height: 20px;
+}
+/*
+Glosary
+*/
+#GLOSSARY #accordion {
+    display: inline-block;
+    width: 100%;
+}
+
+#GLOSSARY #accordion .item {
+    float: left;
+    width: 100%;
+}
+
+#GLOSSARY #accordion .item a.expand {
+    width: 100%;
+    display: block;
+    padding: 5px 0;
+    font-weight: 600;
+    cursor: pointer;
+}
+#GLOSSARY #accordion .item a.expand i {
+    float: right;
+    font-size: 20px;
+}
+#GLOSSARY #accordion .item a.expand i {
+    float: right;
+    font-size: 20px;
+}
+
+#GLOSSARY #accordion .item a.expand[aria-expanded="true"] .fa-angle-right:before {
+    content: "\f107";
+}
+.show .card-body p,
+#GLOSSARY #accordion .item a.expand[aria-expanded="true"] {
+    color: #0691ff;
+
+}
+@media (min-width: 1200px) {
+    .container-responsive .container {
+        width: 90%;
+        max-width: 100%;
+    }
+    .metaforms {
+        padding-right: 12%;
+    }
+    .page-title { 
+        width: 100%;
+    }
+    #circlemobile {
+        display: none;
+    }
+    #album .head h5 {
+        text-transform: uppercase;
+    }
+    .tabs.mobile-forms,
+    .datafrms .close,
+    #all-forums .tabs {
+        display: none;
+    }
+}
+@media (min-width: 1600px) {
+    .page-header.bg .row .vl-m {
+        padding: 0px 8%;
+    }
+}
+@media (max-width: 1199px) {
+    #vimeoapi .player {
+        display: none;
+        position: absolute;
+        top: 0;
+        z-index: 100;
+        background: #fff;
+    }
+    #album .head h5 {
+        color: #fff;
+        font-size: 40px;
+    }
+    #album .head h5 span {
+        opacity: 0;
+    }
+    #album .head {
+        background: #0691ff
+    }
+    #circle {
+        display: none;
+    }
+    .metaforms.addplaylist {
+        padding-right: 12%;
+    }
+    .circle.mobile strong {
+        background: transparent;
+        color: #fff;
+        position: relative;
+        left: -50%;
+    }
+    .datafrms .tab {
+        display: none;
+    }
+    .datafrms .tab.active {
+        display: block;
+    }
+    .datafrms {
+        padding: 50px 20px 100px;
+    }
+    #all-forums .tab {
+        display: none;
+    }
+    #all-forums .content {
+        padding-top: 50px;  
+    }
+    #all-forums .tab.show {
+        display: block;
+
+    }
+    #all-forums #forums .content {
+        overflow: auto;
+        white-space: nowrap;
+    }
+    #activity {
+        width: 80%;
+        margin: 0px auto;
+        max-width: 100%;
+        flex: inherit;
+    }
+    #all-forums #sidebar {
+        background: none;
+        padding: 0;
+    }
+    #all-forums .tabs .nav-tabs li {
+        width: 50%;
+    }
+    .content .forum {
+        background: #fff;
+    }
+    #forums .block {
+        width: 60%;
+        float: none;
+        max-width: 100%;
+    }
+    #all-forums .tabs {
+        width: 80%;
+        margin: 0 auto;
+    }
+}
+@media (max-width: 991px) {
+    .navbar-toggler {
+        display: table-cell;
+    }
+}
+@media (max-width: 768px) {
+   
+   
+}
+@media (max-width: 576px) {
+    .profile div {
+        padding: 0 10px;
+    }
+    .navbar-toggler {
+        margin-left: 10px;
+    }
+    .forum .title h2 {
+        font-size: 30px;
+    }
+    #forums .block {
+        width: 500px;
+    }
+}

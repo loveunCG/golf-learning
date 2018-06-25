@@ -1,0 +1,345 @@
+ <section>
+        <div class="container-fluid" id="vimeoapi">
+            <div class="row">
+                <!-- Player-->
+                <div #video_iframe_element class="col-xl-9 col-lg-12 col-md-12 player">
+                    <div style="margin-top: 20px;" [innerHtml]="video_iframe"></div>
+                    <!-- Playlist form-->
+                    <div class="row datafrms">
+                        <!--Mobile Tabs-->
+                        <div class="col-12">
+                            <div class="tabs mobile-forms">
+                                <ul class="nav nav-tabs">
+                                    <li><a class="active show" data-toggle="tab" href="#questions">MODULES</a></li>
+                                    <li><a data-toggle="tab" href="#send">REVIEW</a></li>
+                                    <li><a data-toggle="tab" href="#addplaylist">GLOSSARY</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                        <!-- End Mobile Tabs-->
+                        <!-- Post Question-->
+                        <div class="col-xl-4 col-lg-12 col-md-12 tab show active" id="questions">
+                            <div class="metaforms">
+                                <form class="">
+                                    <div class="white-wrap">
+                                        <div class="form-group">
+                                            <input class="form-control" type="text" placeholder="Question Title...">
+                                        </div>
+                                        <div class="form-group">
+                                            <textarea class="form-control" id="exampleFormControlTextarea1" rows="4" placeholder="Write your question here..."></textarea>
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <input type="submit" class="btn btn-primary" value="POST QUESTION" />
+                                        <span class="tag">* All questions will be tagged and inputed into the Academy For</span>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                        <!-- End Post Question-->
+                        <!-- Send Message -->
+                        <div class="col-xl-4 col-lg-12 col-md-12 tab" id="send">
+                            <div class="metaforms">
+                                <form>
+                                    <div class="form-group">
+                                        <input class="form-control" type="text" placeholder="Enter friends name...">
+                                    </div>
+                                    <div class="form-group">
+                                        <textarea class="form-control" id="exampleFormControlTextarea1" rows="4" placeholder="Write your message here..."></textarea>
+                                    </div>
+                                    <div class="form-group">
+                                        <input type="submit" class="btn btn-primary" value="SEND MESSAGE" />
+                                        <span class="tag"> * Want a personal George Gankas Certified coach to message?  UP</span>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                        <!-- End Send Message-->
+                        <!-- Add to playlist-->
+                        <div class="col-xl-4 col-lg-12 col-md-12 tab" id="addplaylist">
+                            <div class="metaforms addplaylist">
+                                <div class="form-group">
+                                    <input class="form-control" type="text" placeholder=""  value="Name of Playlist">
+                                    <i class="fas fa-bars"></i>
+                                </div>
+                                <div class="form-group">
+                                    <input class="form-control" type="text" placeholder=""  value="Name of Playlist">
+                                    <i class="fas fa-bars"></i>
+                                </div>
+                                <div class="form-group">
+                                    <input class="form-control" type="text" placeholder=""  value="Name of Playlist">
+                                    <i class="fas fa-bars"></i>
+                                </div>
+                                <div class="form-group">
+                                    <input type="submit" class="btn btn-primary" value="ADD TO PLAYLIST" />
+                                </div>
+                                <div class="nav">
+                                    <ul>
+                                        <li><i class="fas fa-angle-up"></i></li>
+                                        <li><i class="fas fa-angle-down"></i></li>
+                                    </ul>
+                                </div>       
+                            </div>
+                        </div>
+                        <!-- Post Question-->
+                        <div class="close">
+                            <i class="fa fa-times"></i> Close
+                        </div>
+                    </div>
+                    <!-- End  Playlist form-->
+                </div>
+                <!--End Player-->
+                <!--Album Options-->
+                <div class="col-xl-3 col-lg-12 col-md-12 playlist">
+                    <div id="album">
+                        <div class="head content">
+                            <div class="page-title">
+                                <!--<h5><span>Course 6</span>{{courseDetail.course_name}}</h5>-->
+                             
+                                        <circle-progress
+                                  [percent]="50"
+                                  [radius]="30"
+                                  [outerStrokeWidth]="8"
+                                   [innerStrokeWidth]="8"
+                                  [backgroundStrokeWidth]="0"
+                                  [innerStrokeColor] = "'#e7e8ea'"
+                                  [outerStrokeLinecap] = "round"
+                                  [outerStrokeColor]="'#0691ff'"
+                                  [space]="-10"
+                                  [backgroundPadding]="-8"
+                                   [backgroundColor]="'#ffffff'" 
+                                  [showTitle] = true
+                                  [showSubtitle]= false
+                                  [subtitleFontSize] = "10"
+                                  [animation]="true"
+                                  [animationDuration]="300"
+                                ></circle-progress>
+                        </div>
+                        <div class="tabs">
+                            <div class="content">
+                                <ul class="nav nav-tabs">
+                                    <li><a class="active show" data-toggle="tab" href="#MODULES">MODULES</a></li>
+                                    <li><a data-toggle="tab" href="#REVIEW">REVIEW</a></li>
+                                    <li><a data-toggle="tab" href="#GLOSSARY">GLOSSARY</a></li>
+                                </ul>
+                            </div>
+                            <div class="tab-content" >
+                                <div id="MODULES" class="tab-pane fade in active show">
+                                    <div class="module module1"  *ngFor="let moduleData of unimodulesData; let i = index">
+                                        <div class="title">
+                                            <div class="content">
+                                                <h6>{{moduleData.name}}</h6>
+                                            </div>
+                                        </div>
+                                        <div class="elements">
+                                            <ul>
+                                                <li *ngFor="let chapterData of chaptersData[i]?.data">{{chapterData.name}}
+                                                    <input type="checkbox" name="checked" (click)="loadVimeoVideo(id, moduleData.id, chapterData.id)"/>
+                                                    <i class="fas  checked"></i><i class="fas fa-plus" ></i>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                                 <!-- End Module -->
+                                 <!-- Reviews-->
+                                 <div id="REVIEW" class="tab-pane fade in">
+                                    <!--Review Item 01-->
+                                    <div class="module reviews">
+                                        <div class="title">
+                                            <div class="content">
+                                                <h6>Review question goes right here?</h6>
+                                            </div>
+                                        </div>
+                                        <div class="content">
+                                            <p>Lorem ipsum dolor sit amet, ut eam meis accumsan. Facete forensibus ad sit, vix ne agam insolens, dico tantas scriptorem at usu. Duo iriure petentium complectitur ei, decore primis no mei. Eam cu affert invidunt iudicabit, ex vim graecis accumsan periculis.</p>
+                                        </div>
+                                    </div>
+                                    <!--Review Item 02-->
+                                    <div class="module reviews">
+                                        <div class="title">
+                                            <div class="content">
+                                                <h6>Review question goes right here?</h6>
+                                            </div>
+                                        </div>
+                                        <div class="content">
+                                            <p>Lorem ipsum dolor sit amet, ut eam meis accumsan. Facete forensibus ad sit, vix ne agam insolens, dico tantas scriptorem at usu. Duo iriure petentium complectitur ei, decore primis no mei. Eam cu affert invidunt iudicabit, ex vim graecis accumsan periculis.</p>
+                                        </div>
+                                    </div>
+                                    <!--Review Item 03-->
+                                    <div class="module reviews">
+                                        <div class="title">
+                                            <div class="content">
+                                                <h6>Review question goes right here?</h6>
+                                            </div>
+                                        </div>
+                                        <div class="content">
+                                            <p>Lorem ipsum dolor sit amet, ut eam meis accumsan. Facete forensibus ad sit, vix ne agam insolens, dico tantas scriptorem at usu. Duo iriure petentium complectitur ei, decore primis no mei. Eam cu affert invidunt iudicabit, ex vim graecis accumsan periculis.</p>
+                                        </div>
+                                    </div>
+                                    <!--Review Item 04-->
+                                    <div class="module reviews">
+                                        <div class="title">
+                                            <div class="content">
+                                                <h6>Review question goes right here?</h6>
+                                            </div>
+                                        </div>
+                                        <div class="content">
+                                            <p>Lorem ipsum dolor sit amet, ut eam meis accumsan. Facete forensibus ad sit, vix ne agam insolens, dico tantas scriptorem at usu. Duo iriure petentium complectitur ei, decore primis no mei. Eam cu affert invidunt iudicabit, ex vim graecis accumsan periculis.</p>
+                                        </div>
+                                    </div>
+                                    <!--Review Item 05-->
+                                    <div class="module reviews">
+                                        <div class="title">
+                                            <div class="content">
+                                                <h6>Review question goes right here?</h6>
+                                            </div>
+                                        </div>
+                                        <div class="content">
+                                            <p>Lorem ipsum dolor sit amet, ut eam meis accumsan. Facete forensibus ad sit, vix ne agam insolens, dico tantas scriptorem at usu. Duo iriure petentium complectitur ei, decore primis no mei. Eam cu affert invidunt iudicabit, ex vim graecis accumsan periculis.</p>
+                                        </div>
+                                    </div>
+                                 </div>
+                                 <!-- End Reviews-->
+                                 <!-- GLOSSARY -->
+                                 <div id="GLOSSARY" class="tab-pane fade in">
+                                    <!--GLOSSARY 1-->
+                                    <div class="module GLOSSARY">
+                                        <div class="title">
+                                            <div class="content">
+                                                <h6>A</h6>
+                                            </div>
+                                        </div>
+                                        <div class="content">
+                                            <div id="accordion">
+                                                <!-- Glossary Item 1-->
+                                                <div class="item 1">
+                                                    <a class="expand" data-toggle="collapse" data-target="#item1" aria-controls="collapseOne">Aexample <i class="fas fa-angle-right"></i></a>
+                                                    <div id="item1" class="collapse" data-parent="#accordion">
+                                                        <div class="card-body">
+                                                            <p>Lorem ipsum dolor sit amet, ut eam meis accumsan. Facete forensibus ad sit, vix ne agam insolens, dico tantas scriptorem at usu. amet, ut eam meis accumsan. </p>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <!-- End Item-->
+                                                <!-- Glossary Item 1-->
+                                                <div class="item 1">
+                                                    <a class="expand" data-toggle="collapse" data-target="#item2" aria-controls="collapseOne">Aexample <i class="fas fa-angle-right"></i></a>
+                                                    <div id="item2" class="collapse" data-parent="#accordion">
+                                                        <div class="card-body">
+                                                            <p>Lorem ipsum dolor sit amet, ut eam meis accumsan. Facete forensibus ad sit, vix ne agam insolens, dico tantas scriptorem at usu. amet, ut eam meis accumsan. </p>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <!-- End Item-->
+                                                <!-- Glossary Item 1-->
+                                                <div class="item 1">
+                                                    <a class="expand" data-toggle="collapse" data-target="#item3" aria-controls="collapseOne">Aexample <i class="fas fa-angle-right"></i></a>
+                                                    <div id="item3" class="collapse" data-parent="#accordion">
+                                                        <div class="card-body">
+                                                            <p>Lorem ipsum dolor sit amet, ut eam meis accumsan. Facete forensibus ad sit, vix ne agam insolens, dico tantas scriptorem at usu. amet, ut eam meis accumsan. </p>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                    <!-- End Item-->
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!-- End 1-->
+                                    <!--GLOSSARY 2-->
+                                    <div class="module GLOSSARY">
+                                        <div class="title">
+                                            <div class="content">
+                                                <h6>B</h6>
+                                            </div>
+                                        </div>
+                                        <div class="content">
+                                            <div id="accordion">
+                                                <!-- Glossary Item 1-->
+                                                <div class="item 1">
+                                                    <a class="expand" data-toggle="collapse" data-target="#itemB1" aria-controls="collapseOne">Bexample <i class="fas fa-angle-right"></i></a>
+                                                    <div id="itemB1" class="collapse" data-parent="#accordion">
+                                                        <div class="card-body">
+                                                            <p>Lorem ipsum dolor sit amet, ut eam meis accumsan. Facete forensibus ad sit, vix ne agam insolens, dico tantas scriptorem at usu. amet, ut eam meis accumsan. </p>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <!-- End Item-->
+                                                <!-- Glossary Item 1-->
+                                                <div class="item 1">
+                                                    <a class="expand" data-toggle="collapse" data-target="#itemB2" aria-controls="collapseOne">Bexample <i class="fas fa-angle-right"></i></a>
+                                                    <div id="itemB2" class="collapse" data-parent="#accordion">
+                                                        <div class="card-body">
+                                                            <p>Lorem ipsum dolor sit amet, ut eam meis accumsan. Facete forensibus ad sit, vix ne agam insolens, dico tantas scriptorem at usu. amet, ut eam meis accumsan. </p>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <!-- End Item-->
+                                                <!-- Glossary Item 1-->
+                                                <div class="item 1">
+                                                    <a class="expand" data-toggle="collapse" data-target="#itemB1" aria-controls="collapseOne">Bexample <i class="fas fa-angle-right"></i></a>
+                                                    <div id="itemB3" class="collapse" data-parent="#accordion">
+                                                        <div class="card-body">
+                                                            <p>Lorem ipsum dolor sit amet, ut eam meis accumsan. Facete forensibus ad sit, vix ne agam insolens, dico tantas scriptorem at usu. amet, ut eam meis accumsan. </p>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            <!-- End Item-->
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!-- End 02-->
+                                    <!--GLOSSARY 3-->
+                                    <div class="module GLOSSARY">
+                                        <div class="title">
+                                            <div class="content">
+                                                <h6>C</h6>
+                                            </div>
+                                        </div>
+                                        <div class="content">
+                                            <div id="accordion">
+                                                <!-- Glossary Item 1-->
+                                                <div class="item 1">
+                                                    <a class="expand" data-toggle="collapse" data-target="#itemC1" aria-controls="collapseOne">Cexample <i class="fas fa-angle-right"></i></a>
+                                                    <div id="itemC1" class="collapse" data-parent="#accordion">
+                                                        <div class="card-body">
+                                                            <p>Lorem ipsum dolor sit amet, ut eam meis accumsan. Facete forensibus ad sit, vix ne agam insolens, dico tantas scriptorem at usu. amet, ut eam meis accumsan. </p>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <!-- End Item-->
+                                                <!-- Glossary Item 1-->
+                                                <div class="item 1">
+                                                    <a class="expand" data-toggle="collapse" data-target="#itemC2" aria-controls="collapseOne">Cexample <i class="fas fa-angle-right"></i></a>
+                                                    <div id="itemC2" class="collapse" data-parent="#accordion">
+                                                        <div class="card-body">
+                                                            <p>Lorem ipsum dolor sit amet, ut eam meis accumsan. Facete forensibus ad sit, vix ne agam insolens, dico tantas scriptorem at usu. amet, ut eam meis accumsan. </p>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <!-- End Item-->
+                                                <!-- Glossary Item 1-->
+                                                <div class="item 1">
+                                                    <a class="expand" data-toggle="collapse" data-target="#itemC3" aria-controls="collapseOne">Cexample <i class="fas fa-angle-right"></i></a>
+                                                    <div id="itemC3" class="collapse" data-parent="#accordion">
+                                                        <div class="card-body">
+                                                            <p>Lorem ipsum dolor sit amet, ut eam meis accumsan. Facete forensibus ad sit, vix ne agam insolens, dico tantas scriptorem at usu. amet, ut eam meis accumsan. </p>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            <!-- End Item-->
+                                            </div>
+                                        </div>
+                                    </div>
+                                <!-- End 02-->
+                                </div>
+                                <!-- End GLOSSARY-->
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!--End Album Options-->
+            </div>
+        </div>
+    </div>
+    </section>

@@ -1,0 +1,57 @@
+
+.custom_skill_heading {
+    width: 100%;
+    display: inline-block;
+    vertical-align: middle;
+}
+.custom_skill_heading h3 {
+    font-weight: bold;
+    font-size: 18px;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+    padding-top: 20px;
+}
+.custom_skill_icons {
+    width: 100%;
+    display: inline-block;
+    margin: 0;
+    padding: 0;
+}
+.custom_skill_icons ul {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    display: inline-block;
+    width: 100%;
+}
+.custom_skill_icons ul li.active {
+    border-bottom: 3px solid #0691ff;
+}
+.custom_skill_icons ul li {
+    display: inline-block;
+    text-align: center;
+    margin: 0px 15px;
+    border-bottom: 3px solid transparent;
+}
+.custom_skill_icons a:hover {
+    text-decoration: none;
+}
+.custom_skill_icons li img {
+    width: 100%;
+    max-width: 23px;
+    height: 25px;
+    width: auto;
+}
+.skills_inner_menu {
+    width: 100%;
+    display: inline-block;
+    margin: 25px 0px;
+}
+.custom_skill_icons ul li span {
+    display: block;
+    color: black;
+    font-weight: bold;
+    font-size: 11px;
+    margin: 7px 0px;
+}

@@ -1,0 +1,186 @@
+@import '../global.scss';
+
+[data-toggle="collapse"] .fa:before {
+    content: "\f068";
+}
+
+[data-toggle="collapse"].collapsed .fa:before {
+    content: "\f067";
+}
+
+.frequently-asked {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding-top: 100px;
+    align-items: center;
+    & .title {
+        & h2 {
+            text-align: center;
+            padding: 0 30px 50px;
+            font-size: 2.5em;
+            color: #383838;
+        }
+    }
+
+    & .questions {
+        padding: 0px calc(100% * 0.06) !important;
+        margin-bottom: 150px;
+        & div {
+            width: 50%;
+            padding: 0 18px 25px !important;
+
+            & a {
+                font-family: 'Myriad Pro Bold';
+                color: #383838;
+                cursor: pointer;
+                font-size: 14px;
+                padding: 15px 5px !important;
+                width: 100%;
+                border-bottom: 8px solid #007bff;
+                text-decoration: none;
+
+                &:hover {
+                    background-color: #08ABF0;
+                    color: #FFFFFF;
+
+                    & i {
+                        color: #FFFFFF;
+                    }
+                }
+
+                & i {
+                    float: right;
+                    font-size: 12px;
+                }
+            }
+
+            & div {
+                background-color: #F5F5F5;
+                width: 100%;
+                padding: 10px;
+                font-family: 'Myriad Pro Regular';
+                font-size: 14px;
+            }
+        }
+    }
+}
+
+@media (max-width: 1200px) {
+  .frequently-asked {
+      & .title {
+          & h2 {
+              text-align: center;
+              padding: 0 30px 50px;
+              font-size: 1.2em;
+              color: #383838;
+          }
+      }
+      & .questions {
+          padding: 0 30px !important;
+
+          & div {
+            width: 100%;
+            padding: 0 18px 25px !important;
+            & a {
+                font-family: 'Myriad Pro Bold';
+                color: #383838;
+                font-size: 11px;
+                padding: 15px 5px !important;
+                width: 100%;
+                border-bottom: 8px solid #007bff;
+                text-decoration: none;
+                &:hover {
+                    background-color: #08ABF0;
+                    color: #FFFFFF;
+
+                    & i {
+                        color: #FFFFFF;
+                    }
+                }
+
+                & i {
+                    float: right;
+                    font-size: 12px;
+                }
+            }
+
+            & div {
+                background-color: #F5F5F5;
+                width: 100%;
+                padding: 10px;
+                font-family: 'Myriad Pro Regular';
+                font-size: 12px;
+            }
+        }
+      }
+  }
+
+  [data-toggle="collapse"] .fa:before {
+      content: "\f068";
+  }
+
+  [data-toggle="collapse"].collapsed {
+    font-size: .8em;
+  }
+}
+
+@media (max-width: 540px) {
+    .frequently-asked {
+        & .title {
+            & h2 {
+                text-align: center;
+                padding: 0 30px 50px;
+                font-size: 1.2em;
+                color: #383838;
+            }
+        }
+        & .questions {
+            padding: 0 30px !important;
+
+            & div {
+              width: 100%;
+              padding: 0 18px 25px !important;
+              & a {
+                  font-family: 'Myriad Pro Bold';
+                  color: #383838;
+                  font-size: 11px;
+                  padding: 15px 5px !important;
+                  width: 100%;
+                  border-bottom: 8px solid #007bff;
+                  text-decoration: none;
+                  &:hover {
+                      background-color: #08ABF0;
+                      color: #FFFFFF;
+
+                      & i {
+                          color: #FFFFFF;
+                      }
+                  }
+
+                  & i {
+                      float: right;
+                      font-size: 12px;
+                  }
+              }
+
+              & div {
+                  background-color: #F5F5F5;
+                  width: 100%;
+                  padding: 10px;
+                  font-family: 'Myriad Pro Regular';
+                  font-size: 12px;
+              }
+          }
+        }
+    }
+
+    [data-toggle="collapse"] .fa:before {
+        content: "\f068";
+    }
+
+    [data-toggle="collapse"].collapsed {
+      font-size: .8em;
+    }
+}

@@ -1,0 +1,316 @@
+.icons {
+  margin: 100px 0px;
+  overflow-x: hidden;
+  & li {
+    padding-bottom: 5px;
+    & a {
+      text-decoration: none;
+      color: black;
+      &.active {
+        background-color: transparent;
+        & div {
+          & span {
+            border-bottom: 7px solid #0791ff;
+            font-family: 'Myriad Pro Bold';
+            font-size: 1.5em;
+          }
+        }
+      }
+      & div {
+        text-align: center;
+        min-width: 170px; //margin: 0px 20px;
+        & span {
+          font-size: 20px;
+          font-family: 'Myriad Pro Regular'; //border-bottom: 3px solid #FFFFFF;
+          color: #99a5b1;
+          padding-bottom: 5px;
+          margin: 10px;
+        }
+        &:hover {
+          & span {
+            border-bottom: 7px solid #0D97BA;
+            font-family: 'Myriad Pro Bold';
+          }
+        }
+        & img {
+          height: 50px;
+          color: #99a5b1;
+          padding-bottom: 15px;
+        }
+      }
+    }
+  }
+}
+
+.content {
+  margin-bottom: 100px;
+  & .about {
+    width: 40%;
+    padding: 100px 0px 100px 100px !important;
+    & h2 {
+      font-family: 'Montserrat Black', arial;
+      font-size: 32px;
+    }
+    & img {
+      width: 100%;
+    }
+    & p {
+      &.explain {
+        font-family: 'Myriad Pro Light';
+        font-size: 20px;
+        margin-top: 60px;
+      }
+      &.short-explain {
+        font-family: 'Myriad Pro Bold';
+        font-size: 16px;
+        margin-top: 50px;
+      }
+      &.arrows {
+        font-family: 'Myriad Pro Light';
+        font-size: 45px;
+        margin-top: 50px;
+        & i {
+          cursor: pointer;
+          &.fa-chevron-right {
+            padding-left: 25px;
+          }
+        }
+      }
+    }
+  }
+  & .portfolio {
+    width: 60%;
+    clip: 100px 100px 100px 100px;
+    & img {
+      width: 100%;
+      position: relative;
+      top: 50%;
+      transform: translateY(-50%);
+    }
+  }
+}
+
+@media (max-width: 1200px) {
+  .icons {
+    margin: 100px 0px;
+    overflow-x: hidden;
+    & li {
+      padding-bottom: 5px;
+      & a {
+        text-decoration: none;
+        color: black;
+        &.active {
+          background-color: transparent;
+          & div {
+            & span {
+              border-bottom: 7px solid #0791ff;
+              font-family: 'Myriad Pro Bold';
+              font-size: 1.5em;
+            }
+          }
+        }
+        & div {
+          text-align: center;
+          min-width: 170px; //margin: 0px 20px;
+          & span {
+            font-size: 14px;
+            font-family: 'Myriad Pro Regular'; //border-bottom: 3px solid #FFFFFF;
+            color: #99a5b1;
+            padding-bottom: 5px;
+            margin: 0px;
+          }
+          &:hover {
+            & span {
+              border-bottom: 7px solid #0D97BA;
+              font-family: 'Myriad Pro Bold';
+            }
+          }
+          & img {
+            height: 30px;
+            color: #99a5b1;
+            padding-bottom: 15px;
+          }
+        }
+      }
+    }
+  }
+  .content {
+    & .about {
+      width: 40%;
+      padding: 100px 0px 100px 50px !important;
+      & h2 {
+        font-size: 24px;
+      }
+      & p {
+        &.explain {
+          font-size: 16px;
+          margin-top: 30px;
+        }
+        &.arrows {
+          margin-top: 50px;
+          font-size: 24px;
+        }
+      }
+    }
+    & .portfolio {
+      width: 60%;
+      & img {
+        width: 100%;
+        position: relative;
+        top: 0%;
+        transform: translateY(0);
+      }
+    }
+  }
+}
+
+@media (max-width: 992px) {
+  .icons {
+    margin: 50px 0px;
+  }
+  .content {
+    margin-bottom: 50px;
+    & .about {
+      width: 50%;
+      padding: 50px 0px 50px 30px !important;
+      & h2 {
+        font-size: 24px;
+      }
+      & p {
+        &.explain {
+          font-size: 16px;
+          margin-top: 30px;
+        }
+        &.arrows {
+          margin-top: 30px;
+          font-size: 24px;
+        }
+      }
+    }
+    & .portfolio {
+      width: 50%;
+      & img {
+        position: relative;
+        top: 50%;
+        transform: translateY(-50%);
+      }
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .icons {
+    margin: 25px 0px;
+  }
+  .content {
+    margin-bottom: 30px;
+    & .about {
+      width: 60%;
+      padding: 20px 25px !important;
+      & h2 {
+        font-size: 20px;
+      }
+      & p {
+        &.explain {
+          font-size: 14px;
+          margin-top: 20px;
+        }
+        &.arrows {
+          margin-top: 25px;
+          font-size: 24px;
+        }
+      }
+    }
+    & .portfolio {
+      width: 40%;
+      & img {
+        position: relative;
+        top: 50%;
+        transform: translateY(-50%);
+      }
+    }
+  }
+}
+
+@media (max-width: 540px) {
+  .icons {
+    margin: 80px 0px 50px 0px;
+    overflow-x: auto;
+    & li {
+      padding-bottom: 5px;
+      & a {
+        text-decoration: none;
+        color: black;
+        &.active {
+          background-color: transparent;
+          & div {
+            & span {
+              border-bottom: 7px solid #0791ff;
+              font-family: 'Myriad Pro Bold';
+              font-size: 1.5em;
+            }
+          }
+        }
+        & div {
+          text-align: center;
+          min-width: 170px; //margin: 0px 20px;
+          & span {
+            font-size: 20px;
+            font-family: 'Myriad Pro Regular'; //border-bottom: 3px solid #FFFFFF;
+            color: #99a5b1;
+            padding-bottom: 5px;
+            margin: 0px;
+          }
+          &:hover {
+            & span {
+              border-bottom: 7px solid #0D97BA;
+              font-family: 'Myriad Pro Bold';
+            }
+          }
+          & img {
+            height: 50px;
+            color: #99a5b1;
+            padding-bottom: 15px;
+          }
+        }
+      }
+    }
+  }
+  .content {
+    margin-bottom: 25px;
+    & .about {
+      width: 100%;
+      padding: 20px 25px !important;
+      & h2 {
+        font-size: 24px;
+        margin-bottom: 40px;
+        text-align: center;
+      }
+      & img {
+        margin-bottom: 40px;
+      }
+      & p {
+        text-align: center;
+        &.explain {
+          font-size: 14px;
+        }
+        &.short-explain {
+          margin-bottom: 40px;
+          display: none;
+        }
+        &.arrows {
+          margin-top: 20px;
+        }
+      }
+    }
+    & .portfolio {
+      width: 100%;
+      padding: 25px 0px 25px 25px !important;
+      & img {
+        position: relative;
+        top: 0%;
+        transform: translateY(0);
+      }
+    }
+  }
+}

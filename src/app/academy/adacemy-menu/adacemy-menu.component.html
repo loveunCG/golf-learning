@@ -1,0 +1,11 @@
+<div class="custom_active_menu">
+  <ul>
+    <li *ngFor="let coursesData of courses; let i = index">
+      <a routerLink="/course/courseDetails/{{coursesData.id}}" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}" attr.data-course="course {{i+1}}">
+       {{coursesData.name}}
+      </a>
+    </li>
+    
+  </ul>
+
+</div>

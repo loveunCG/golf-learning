@@ -1,0 +1,215 @@
+<div class="d-inline-flex flex-column p-0 splash">
+    <div class="p-0 menu flex-column flex-md-row">
+        <nav class="navbar">
+          <div class="d-flex flex-fill justify-content-between">
+              <a class="navbar-brand " href="#">
+                <img class="mx-auto" src="/assets/images/home/elements/logo-blue.png">
+                <img style="padding: 5%;" class="mx-auto" src="/assets/images/home/elements/logo-gankas.png">
+              </a>
+              <div class="nav navbar-nav align-items-end nav-items">
+                  <div *ngIf="!currentUser" class="nav-item " (click)="onLogIn()">
+                      <img src="/assets/images/home/icons/iconLogin.png">
+                      <span>{{ loginString }}</span>
+                  </div>
+                  <div *ngIf="currentUser" class="nav-item  d-none d-sm-block login-avatar">
+                      <img class="login-avatar-img"[src]="currentUser?.image">
+                      {{currentUser?.name}}
+                  </div>
+                  <div *ngIf="currentUser" class="nav-item " (click)="onLogOut()">
+                      <img src="/assets/images/logout.svg">
+                      <span>Logout</span>
+                  </div>
+              </div>
+          </div>
+        </nav>
+    </div>
+
+    <div class="d-flex content justify-content-between flex-column flex-md-row">
+        <div class="p-0 title">
+            <h1><div>MAKE THE MOST<br>OF YOUR GAME.</div></h1>
+        </div>
+        <div class="p-0 signup-mobile d-block d-sm-none">
+            <div class="cards">
+                <div class="card-header justify-content-sm-center" style="background-color: #383838;">
+                    <h6>{{ signInString }}&nbsp;<a href="#"><span>RSVP</span></a></h6>
+                </div>
+                <div class="card-body" style="background-color: rgba(214, 205, 193, 0.8);">
+                  <div class="d-lg-flex">
+                      <div class="d-flex justify-content-center">
+                        <button type="button" class="btn btn-sm btn-create-account-sm btn-primary rounded">{{ loginButtonString }} WITH EMAIL</button>
+                      </div>
+                      <div class="d-flex justify-content-center" style="text-align: center;">
+                          <div class="line-spacing">
+                              <span class="line-bar">{{ withOtherString }}</span>
+                          </div>
+                      </div>
+                      <div class="d-flex justify-content-between">
+                          <a class="btn btn-sm social-btn btn-outline-primary">
+                            <svg
+                            class="align-middle"
+                            xmlns="http://www.w3.org/2000/svg" x="0px" y="3px"
+                            width="20" height="20"
+                            viewBox="10 10 20 40"
+                            style="fill:#000000;">
+                            <g id="surface1">
+                              <path style=" fill:#3F51B5;" d="M 42 37 C 42 39.761719 39.761719 42 37 42 L 11 42 C 8.238281 42 6 39.761719 6 37 L 6 11 C 6 8.238281 8.238281 6 11 6 L 37 6 C 39.761719 6 42 8.238281 42 11 Z "></path><path style=" fill:#FFFFFF;" d="M 34.367188 25 L 31 25 L 31 38 L 26 38 L 26 25 L 23 25 L 23 21 L 26 21 L 26 18.589844 C 26.003906 15.082031 27.460938 13 31.59375 13 L 35 13 L 35 17 L 32.714844 17 C 31.105469 17 31 17.601563 31 18.722656 L 31 21 L 35 21 Z "></path></g></svg>&nbsp;FACEBOOK</a>
+                          <a class="btn btn-sm social-btn  btn-outline-primary"><svg xmlns="http://www.w3.org/2000/svg"
+                            x="0px" y="3px"
+                            class="align-middle"
+                            width="20" height="20"
+                            viewBox="10 10 20 40"
+                            style="fill:#000000;"><g id="surface1"><path style=" fill:#FFC107;" d="M 43.609375 20.082031 L 42 20.082031 L 42 20 L 24 20 L 24 28 L 35.304688 28 C 33.652344 32.65625 29.222656 36 24 36 C 17.371094 36 12 30.628906 12 24 C 12 17.371094 17.371094 12 24 12 C 27.058594 12 29.84375 13.152344 31.960938 15.039063 L 37.617188 9.382813 C 34.046875 6.054688 29.269531 4 24 4 C 12.953125 4 4 12.953125 4 24 C 4 35.046875 12.953125 44 24 44 C 35.046875 44 44 35.046875 44 24 C 44 22.660156 43.863281 21.351563 43.609375 20.082031 Z "></path><path style=" fill:#FF3D00;" d="M 6.304688 14.691406 L 12.878906 19.511719 C 14.65625 15.109375 18.960938 12 24 12 C 27.058594 12 29.84375 13.152344 31.960938 15.039063 L 37.617188 9.382813 C 34.046875 6.054688 29.269531 4 24 4 C 16.316406 4 9.65625 8.335938 6.304688 14.691406 Z "></path><path style=" fill:#4CAF50;" d="M 24 44 C 29.164063 44 33.859375 42.023438 37.410156 38.808594 L 31.21875 33.570313 C 29.210938 35.089844 26.714844 36 24 36 C 18.796875 36 14.382813 32.683594 12.71875 28.054688 L 6.195313 33.078125 C 9.503906 39.554688 16.226563 44 24 44 Z "></path><path style=" fill:#1976D2;" d="M 43.609375 20.082031 L 42 20.082031 L 42 20 L 24 20 L 24 28 L 35.304688 28 C 34.511719 30.238281 33.070313 32.164063 31.214844 33.570313 C 31.21875 33.570313 31.21875 33.570313 31.21875 33.570313 L 37.410156 38.808594 C 36.972656 39.203125 44 34 44 24 C 44 22.660156 43.863281 21.351563 43.609375 20.082031 Z "></path></g></svg>
+                            &nbsp;GOOGLE</a>
+                          <a class="btn social-btn btn-sm btn-outline-primary"><svg xmlns="http://www.w3.org/2000/svg"
+                            x="0px" y="3px"
+                            class="align-middle"
+                            width="20" height="20"
+                            viewBox="10 10 20 40"
+                            style="fill:#000000;"><g id="surface1"><path style=" fill:#0288D1;" d="M 42 37 C 42 39.761719 39.761719 42 37 42 L 11 42 C 8.238281 42 6 39.761719 6 37 L 6 11 C 6 8.238281 8.238281 6 11 6 L 37 6 C 39.761719 6 42 8.238281 42 11 Z "></path><path style=" fill:#FFFFFF;" d="M 12 19 L 17 19 L 17 36 L 12 36 Z "></path><path style=" fill:#FFFFFF;" d="M 14.484375 17 L 14.457031 17 C 12.964844 17 12 15.886719 12 14.5 C 12 13.078125 12.996094 12 14.515625 12 C 16.035156 12 16.972656 13.078125 17 14.5 C 17 15.886719 16.035156 17 14.484375 17 Z "></path><path style=" fill:#FFFFFF;" d="M 36 36 L 31 36 L 31 26.902344 C 31 24.703125 29.773438 23.203125 27.808594 23.203125 C 26.308594 23.203125 25.496094 24.214844 25.101563 25.191406 C 24.957031 25.542969 25 26.511719 25 27 L 25 36 L 20 36 L 20 19 L 25 19 L 25 21.617188 C 25.722656 20.5 26.851563 19 29.738281 19 C 33.316406 19 36 21.25 36 26.273438 Z "></path></g></svg>
+                            &nbsp;LINKEDIN</a>
+                      </div>
+                      <small class="form-text form-muted">
+                          <br>By signing up you agree to George Gankas Golf's <br><u><a href="#">Terms and Conditions</a></u>.
+                      </small>
+                  </div>
+                </div>
+            </div>
+        </div>
+        <div class="p-0 signup d-none d-sm-block">
+            <div class="cards">
+                <div class="card-header">
+                    <h2>{{signInString }}&nbsp;<a href="#">RSVP</a></h2>
+
+                </div>
+                <div class="card-body" style="background-color: rgba(214, 205, 193, 0.8);">
+                    <form *ngIf="signIn" novalidate [formGroup]="loginForm">
+                        <div class="form-group">
+                            <label class="font-weight-bold" for="eMailInput">Email</label>
+                            <input type="email" class="form-control" id="eMailInput" formControlName="email">
+                        </div>
+                        <div class="form-group">
+                            <label class="font-weight-bold" for="passwordInput">{{ passwordString }}</label>
+                            <!-- <div class="showpass float-right"><i class="fa fa-eye"></i>&nbsp;&nbsp;<div class="float-right">Show</div></div> -->
+                            <input type="password" class="form-control" id="passwordInput" formControlName="password">
+                        </div>
+                        <button type="button" class="btn btn-lg btn-primary btn-create-account" [disabled]="loginForm.invalid" (click)="onLoggedin()">{{ loginButtonString }}</button>
+                        <div class="d-flex justify-content-center m-auto" style="text-align: center;">
+                            <div class="line-spacing">
+                                <span class="line-bar">{{ withOtherString }}</span>
+                            </div>
+                        </div>
+                        <div class="d-flex justify-content-between">
+                            <a class="btn social-btn btn-outline-primary">
+                              <svg
+                              class="align-middle"
+                              xmlns="http://www.w3.org/2000/svg" x="0px" y="3px"
+                              width="20" height="20"
+                              viewBox="10 10 20 40"
+                              style="fill:#000000;">
+                              <g id="surface1">
+                                <path style=" fill:#3F51B5;" d="M 42 37 C 42 39.761719 39.761719 42 37 42 L 11 42 C 8.238281 42 6 39.761719 6 37 L 6 11 C 6 8.238281 8.238281 6 11 6 L 37 6 C 39.761719 6 42 8.238281 42 11 Z "></path><path style=" fill:#FFFFFF;" d="M 34.367188 25 L 31 25 L 31 38 L 26 38 L 26 25 L 23 25 L 23 21 L 26 21 L 26 18.589844 C 26.003906 15.082031 27.460938 13 31.59375 13 L 35 13 L 35 17 L 32.714844 17 C 31.105469 17 31 17.601563 31 18.722656 L 31 21 L 35 21 Z "></path></g></svg>&nbsp;FACEBOOK</a>
+                            <a class="btn social-btn  btn-outline-primary"><svg xmlns="http://www.w3.org/2000/svg"
+                              x="0px" y="3px"
+                              class="align-middle"
+                              width="20" height="20"
+                              viewBox="10 10 20 40"
+                              style="fill:#000000;"><g id="surface1"><path style=" fill:#FFC107;" d="M 43.609375 20.082031 L 42 20.082031 L 42 20 L 24 20 L 24 28 L 35.304688 28 C 33.652344 32.65625 29.222656 36 24 36 C 17.371094 36 12 30.628906 12 24 C 12 17.371094 17.371094 12 24 12 C 27.058594 12 29.84375 13.152344 31.960938 15.039063 L 37.617188 9.382813 C 34.046875 6.054688 29.269531 4 24 4 C 12.953125 4 4 12.953125 4 24 C 4 35.046875 12.953125 44 24 44 C 35.046875 44 44 35.046875 44 24 C 44 22.660156 43.863281 21.351563 43.609375 20.082031 Z "></path><path style=" fill:#FF3D00;" d="M 6.304688 14.691406 L 12.878906 19.511719 C 14.65625 15.109375 18.960938 12 24 12 C 27.058594 12 29.84375 13.152344 31.960938 15.039063 L 37.617188 9.382813 C 34.046875 6.054688 29.269531 4 24 4 C 16.316406 4 9.65625 8.335938 6.304688 14.691406 Z "></path><path style=" fill:#4CAF50;" d="M 24 44 C 29.164063 44 33.859375 42.023438 37.410156 38.808594 L 31.21875 33.570313 C 29.210938 35.089844 26.714844 36 24 36 C 18.796875 36 14.382813 32.683594 12.71875 28.054688 L 6.195313 33.078125 C 9.503906 39.554688 16.226563 44 24 44 Z "></path><path style=" fill:#1976D2;" d="M 43.609375 20.082031 L 42 20.082031 L 42 20 L 24 20 L 24 28 L 35.304688 28 C 34.511719 30.238281 33.070313 32.164063 31.214844 33.570313 C 31.21875 33.570313 31.21875 33.570313 31.21875 33.570313 L 37.410156 38.808594 C 36.972656 39.203125 44 34 44 24 C 44 22.660156 43.863281 21.351563 43.609375 20.082031 Z "></path></g></svg>
+                              &nbsp;GOOGLE</a>
+                            <a class="btn social-btn btn-outline-primary"><svg xmlns="http://www.w3.org/2000/svg"
+                              x="0px" y="3px"
+                              class="align-middle"
+                              width="20" height="20"
+                              viewBox="10 10 20 40"
+                              style="fill:#000000;"><g id="surface1"><path style=" fill:#0288D1;" d="M 42 37 C 42 39.761719 39.761719 42 37 42 L 11 42 C 8.238281 42 6 39.761719 6 37 L 6 11 C 6 8.238281 8.238281 6 11 6 L 37 6 C 39.761719 6 42 8.238281 42 11 Z "></path><path style=" fill:#FFFFFF;" d="M 12 19 L 17 19 L 17 36 L 12 36 Z "></path><path style=" fill:#FFFFFF;" d="M 14.484375 17 L 14.457031 17 C 12.964844 17 12 15.886719 12 14.5 C 12 13.078125 12.996094 12 14.515625 12 C 16.035156 12 16.972656 13.078125 17 14.5 C 17 15.886719 16.035156 17 14.484375 17 Z "></path><path style=" fill:#FFFFFF;" d="M 36 36 L 31 36 L 31 26.902344 C 31 24.703125 29.773438 23.203125 27.808594 23.203125 C 26.308594 23.203125 25.496094 24.214844 25.101563 25.191406 C 24.957031 25.542969 25 26.511719 25 27 L 25 36 L 20 36 L 20 19 L 25 19 L 25 21.617188 C 25.722656 20.5 26.851563 19 29.738281 19 C 33.316406 19 36 21.25 36 26.273438 Z "></path></g></svg>
+                              &nbsp;LINKEDIN</a>
+                        </div>
+                        <small class="form-text form-muted">
+                            <br>By signing up you agree to George Gankas Golf's <u><br><a href="#">Terms and Conditions</a></u>.
+                        </small>
+                    </form>
+                    <form *ngIf="!signIn" novalidate [formGroup]="siginForm">
+                        <ngb-alert *ngIf="signUpAlert" (close)="signUpAlert = true">{{signUpResult}}</ngb-alert>
+
+                        <div *ngIf="!signIn" class="d-flex justify-content-between flex-sm-row">
+                            <div class="form-group" style="margin-right: 15px" [ngClass]="displayFieldCss('first_name')">
+                                <label class="font-weight-bold" for="eMailInput">First Name</label>
+                                <input type="name" name="first_name" class="form-control" id="eFNameInput" formControlName="first_name">
+                                <div *ngIf = "isFieldValid('first_name')">
+                                  First name is Required!
+                                </div>
+                            </div>
+                            <div class="form-group" [ngClass]="displayFieldCss('last_name')" >
+                                <label class="font-weight-bold" for="eMailInput">Last Name</label>
+                                <input type="name" class="form-control" id="eLNameInput" formControlName="last_name">
+                                <div *ngIf = "isFieldValid('last_name')">
+                                    Last name is Required!
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form-group" [ngClass]="displayFieldCss('email')">
+                            <label class="font-weight-bold" for="eMailInput">Email</label>
+                            <input type="email" class="form-control" id="eMailInput" formControlName="email">
+                            <div *ngIf = "isFieldValid('email')">
+                                Email has error!
+                            </div>
+                        </div>
+                        <div class="form-group" [ngClass]="displayFieldCss('password')">
+                            <label class="font-weight-bold" for="passwordInput">{{ passwordString }}</label>
+                            <input type="password" class="form-control" id="passwordInput" formControlName="password">
+                            <div *ngIf = "isFieldValid('password')">
+                                password must be at least 6 characters long.
+                            </div>
+                        </div>
+                        <button type="button" class="btn btn-lg btn-primary btn-create-account" [disabled]="siginForm.invalid" (click)="onSignUp()">{{ loginButtonString }}</button>
+                        <div class="d-flex justify-content-center m-auto" style="text-align: center;">
+                            <div class="line-spacing">
+                                <span class="line-bar">{{ withOtherString }}</span>
+                            </div>
+                        </div>
+
+                        <div class="d-flex justify-content-between">
+                            <a class="btn social-btn btn-outline-primary">
+                              <svg
+                              class="align-middle"
+                              xmlns="http://www.w3.org/2000/svg" x="0px" y="3px"
+                              width="20" height="20"
+                              viewBox="10 10 20 40"
+                              style="fill:#000000;">
+                              <g id="surface1">
+                                <path style=" fill:#3F51B5;" d="M 42 37 C 42 39.761719 39.761719 42 37 42 L 11 42 C 8.238281 42 6 39.761719 6 37 L 6 11 C 6 8.238281 8.238281 6 11 6 L 37 6 C 39.761719 6 42 8.238281 42 11 Z "></path><path style=" fill:#FFFFFF;" d="M 34.367188 25 L 31 25 L 31 38 L 26 38 L 26 25 L 23 25 L 23 21 L 26 21 L 26 18.589844 C 26.003906 15.082031 27.460938 13 31.59375 13 L 35 13 L 35 17 L 32.714844 17 C 31.105469 17 31 17.601563 31 18.722656 L 31 21 L 35 21 Z "></path></g></svg>&nbsp;FACEBOOK</a>
+                            <a class="btn social-btn  btn-outline-primary"><svg xmlns="http://www.w3.org/2000/svg"
+                              x="0px" y="3px"
+                              class="align-middle"
+                              width="20" height="20"
+                              viewBox="10 10 20 40"
+                              style="fill:#000000;"><g id="surface1"><path style=" fill:#FFC107;" d="M 43.609375 20.082031 L 42 20.082031 L 42 20 L 24 20 L 24 28 L 35.304688 28 C 33.652344 32.65625 29.222656 36 24 36 C 17.371094 36 12 30.628906 12 24 C 12 17.371094 17.371094 12 24 12 C 27.058594 12 29.84375 13.152344 31.960938 15.039063 L 37.617188 9.382813 C 34.046875 6.054688 29.269531 4 24 4 C 12.953125 4 4 12.953125 4 24 C 4 35.046875 12.953125 44 24 44 C 35.046875 44 44 35.046875 44 24 C 44 22.660156 43.863281 21.351563 43.609375 20.082031 Z "></path><path style=" fill:#FF3D00;" d="M 6.304688 14.691406 L 12.878906 19.511719 C 14.65625 15.109375 18.960938 12 24 12 C 27.058594 12 29.84375 13.152344 31.960938 15.039063 L 37.617188 9.382813 C 34.046875 6.054688 29.269531 4 24 4 C 16.316406 4 9.65625 8.335938 6.304688 14.691406 Z "></path><path style=" fill:#4CAF50;" d="M 24 44 C 29.164063 44 33.859375 42.023438 37.410156 38.808594 L 31.21875 33.570313 C 29.210938 35.089844 26.714844 36 24 36 C 18.796875 36 14.382813 32.683594 12.71875 28.054688 L 6.195313 33.078125 C 9.503906 39.554688 16.226563 44 24 44 Z "></path><path style=" fill:#1976D2;" d="M 43.609375 20.082031 L 42 20.082031 L 42 20 L 24 20 L 24 28 L 35.304688 28 C 34.511719 30.238281 33.070313 32.164063 31.214844 33.570313 C 31.21875 33.570313 31.21875 33.570313 31.21875 33.570313 L 37.410156 38.808594 C 36.972656 39.203125 44 34 44 24 C 44 22.660156 43.863281 21.351563 43.609375 20.082031 Z "></path></g></svg>
+                              &nbsp;GOOGLE</a>
+                            <a class="btn social-btn btn-outline-primary"><svg xmlns="http://www.w3.org/2000/svg"
+                              x="0px" y="3px"
+                              class="align-middle"
+                              width="20" height="20"
+                              viewBox="10 10 20 40"
+                              style="fill:#000000;"><g id="surface1"><path style=" fill:#0288D1;" d="M 42 37 C 42 39.761719 39.761719 42 37 42 L 11 42 C 8.238281 42 6 39.761719 6 37 L 6 11 C 6 8.238281 8.238281 6 11 6 L 37 6 C 39.761719 6 42 8.238281 42 11 Z "></path><path style=" fill:#FFFFFF;" d="M 12 19 L 17 19 L 17 36 L 12 36 Z "></path><path style=" fill:#FFFFFF;" d="M 14.484375 17 L 14.457031 17 C 12.964844 17 12 15.886719 12 14.5 C 12 13.078125 12.996094 12 14.515625 12 C 16.035156 12 16.972656 13.078125 17 14.5 C 17 15.886719 16.035156 17 14.484375 17 Z "></path><path style=" fill:#FFFFFF;" d="M 36 36 L 31 36 L 31 26.902344 C 31 24.703125 29.773438 23.203125 27.808594 23.203125 C 26.308594 23.203125 25.496094 24.214844 25.101563 25.191406 C 24.957031 25.542969 25 26.511719 25 27 L 25 36 L 20 36 L 20 19 L 25 19 L 25 21.617188 C 25.722656 20.5 26.851563 19 29.738281 19 C 33.316406 19 36 21.25 36 26.273438 Z "></path></g></svg>
+                              &nbsp;LINKEDIN</a>
+                        </div>
+                        <small class="form-text form-muted">
+                            <br>By signing up you agree to George Gankas Golf's <br><u><a href="#">Terms and Conditions</a></u>.
+                        </small>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="bottom-icons d-inline-flex content justify-content-between flex-md-row">
+        <img  src="/assets/images/home/present-oakley.png">
+        <img  src="/assets/images/home/present-taylormade.png">
+        <img  src="/assets/images/home/present-trackman.png">
+        <img  src="/assets/images/home/forewardLogoWeb.png" style="height: 90%;">
+    </div>
+
+    <a class="down-arrow justify-content-center" href="">
+        <img style="margin-bottom: 10px;" src="/assets/images/home/EXPLORE WHAT’S TO COME.png">
+        <img src="/assets/images/home/keyboard-right-arrow-button.png">
+    </a>
+</div>

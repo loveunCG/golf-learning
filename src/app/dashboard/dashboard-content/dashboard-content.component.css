@@ -1,0 +1,137 @@
+.custom_playlist_info {
+    width: 100%;
+    display: inline-block;
+    font-size: 0;
+}
+.name_container {
+    display: inline-block;
+    color: white;
+    background: #0691ff;
+    width: 100%;
+    border-radius: 5px 5px 0px 0px;
+    padding: 10px 15px;
+}
+.name_container h3 {
+    margin: 0;
+    text-transform: uppercase;
+    font-weight: 600;
+    font-size: 27px;
+    display: inline-block;
+    float: left;
+}
+.name_container span {
+    font-size: 40px;
+    display: inline-block;
+    float: right;
+    line-height: 1px;
+}
+.playlist_info {
+    width: 100%;
+    display: inline-block;
+    font-size: 0px;
+    border: 1px solid #0000001a;
+    padding: 15px 15px;
+    border-top: unset;
+}
+.customer_name {
+    width: 50%;
+    display: inline-block;
+}
+.customer_name img {
+    max-width: 40px;
+    vertical-align: middle;
+}
+.customer_name .active {
+    border-radius: 50%;
+    border: 4px solid #0691ff;
+    width: 35px;
+}
+.customer_name h3 {
+    display: inline-block;
+    margin: 0;
+    vertical-align: middle;
+    text-transform: uppercase;
+    font-weight: bold;
+    font-size: 16px;
+    letter-spacing: 1px;
+    margin-left: 10px;
+    opacity: 0.7;
+}
+.playlist_limit {
+    width: 25%;
+    display: inline-block;
+    vertical-align: middle;
+}
+.playlist_limit h3 {
+    font-weight: bold;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    margin: 0;
+    font-size: 16px;
+    opacity: 0.7;
+}
+.playlist_close {
+    width: 25%;
+    display: inline-block;
+    text-align: right;
+    vertical-align: middle;
+}
+.playlist_close img {
+    max-width: 15px;
+    cursor: pointer;
+}
+.custom_play_list_details {
+    width: 100%;
+    padding: 20px 0px;
+    padding-right: 40px;
+}
+.audo_controls {
+    background: #0691ff;
+    border-radius: 0px 0px 5px 5px;
+    border: 1px solid transparent;
+}
+.audo_controls audio {
+    width: 100%;
+    background-color: #0691ff;
+    border-radius: 0px 0px 5px 5px;
+}
+.custom_top_padding {
+    padding-top: 30px;
+}
+.custom_upload .name_container {
+    background: #f1f1f1;
+}
+.custom_upload .playlist_info {
+    height: 300px;
+    border: 10px solid #f1f1f1;
+    padding: 0;
+}
+.custom_add_icon {
+    width: 100%;
+    background: white;
+    text-align: center;
+    vertical-align: middle;
+    height: 100%;
+    display: inline-block;
+    position: relative;
+}
+.custom_add_icon img {
+    vertical-align: middle;
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    top: 0;
+    margin: auto;
+    cursor: pointer;
+}
+
+@media only screen and (max-width: 1100px) {
+    .custom_play_list_details[_ngcontent-c7] {
+        padding-right: unset;
+    }
+    .name_container h3 {
+        font-size: 18px;
+    }
+
+}

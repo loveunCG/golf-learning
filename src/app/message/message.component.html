@@ -1,0 +1,35 @@
+<div class="chat-content desktop-version">
+  <div class="chat-body-wrapper">
+    <div class="chat-contacts-wrapper">
+      <app-chat-contacts></app-chat-contacts>
+    </div>
+    <div class="chat-panel-wrapper  d-md-block">
+      <app-chat-message></app-chat-message>
+    </div>
+  </div>
+</div>
+<div class="chat-content mobile-version">
+  <div *ngIf="selectedContact" class="back">
+    <span (click)=back() class="back-icon">
+      <i class="fa fa-angle-left"></i>
+    </span>
+    <span>
+      <span class=" avatar avatar-online">
+        <img alt="avatar" [src]="'/assets/images/admin/default.png'">
+        <span class="online">
+          &nbsp;
+        </span>
+      </span>
+
+      {{selectedContact.name}}
+    </span>
+  </div>
+  <div class="chat-body-wrapper">
+    <div class="chat-contacts-wrapper" *ngIf="!selectedContact">
+      <app-chat-contacts></app-chat-contacts>
+    </div>
+    <div class="chat-panel-wrapper d-md-block" *ngIf="selectedContact">
+      <app-chat-message [selectedContact]="selectedContact" [messages]="messages"></app-chat-message>
+    </div>
+  </div>
+</div>

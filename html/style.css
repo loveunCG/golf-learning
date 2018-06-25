@@ -1,0 +1,900 @@
+@import url('https://fonts.googleapis.com/css?family=Montserrat:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i');
+/*
+Theme Settings
+*/
+body {
+    font-family: Montserrat;
+    font-size: 14px;
+}
+.img-full {
+    width: 100%;
+}
+/*
+    Main Header
+*/
+#header {
+    background: #083c4f;
+}
+#header img.logo {
+    width: 179px;
+}
+.topbar {
+    border-bottom: 1px solid #063647;
+    padding-top: 30px;
+    padding-bottom: 30px;
+
+}
+.profile {
+    float: right;
+}
+.profile div {
+    display: inline-block;
+    color: #fff;
+    padding: 0 20px;
+}
+
+.profile .notification {
+    font-size: 23px;
+    position: relative;
+}
+.profile .notification:before {
+    content: attr(data-count);
+    right: 10px;
+    top: -6px;
+    border: 2px solid #083c4f;
+    width: 20px;
+    height: 20px;
+    background: #fa4802;
+    border-radius: 100%;
+    text-align: center;
+    font-size: 10px;
+    display: table-cell;
+    vertical-align: middle;
+    position: absolute;
+}
+.profile .user {
+    padding-right: 0;
+    }
+.profile .user a {
+    color: #fff;
+    font-size: 13px;
+}
+.profile .user a i {
+    padding-left: 20px;
+}
+/*
+Menus
+*/
+.nav-menu {
+    margin: 0;
+    padding: 0;
+}
+.top-nav ul.navbar-nav {
+    text-align: center;
+    width: 100%;
+}
+.top-nav ul.navbar-nav li {
+    display: inline-block;
+    width: 100%;
+    border-right: 1px solid #063647;
+}
+.top-nav ul.navbar-nav li:last-child {
+    border: none;
+}
+.navbar-nav a {
+    font-size: 13px;
+    color: #fff;
+    padding: 20px 0 !important;
+
+}
+.top-nav nav.navbar {
+    padding: 0;
+}
+.navbar-nav a:hover, .top-nav ul.navbar-nav li.show a, .top-nav ul.navbar-nav li.active a {
+    background: #0691ff;
+}
+.navbar-nav a i {
+    padding-right: 20px;
+    font-size: 17px;
+}
+.navbar-nav a:after {
+    opacity: 0;
+}
+.navbar-toggler {
+    padding: 0;
+    vertical-align: middle;
+    font-size: 30px;
+    color: #fff;
+    margin-left: 15px;
+    display: none;
+}
+/*
+Sub menus
+*/
+.top-nav ul.navbar-nav li:hover .dropdown-menu {
+    display: block;
+}
+.top-nav .navbar-nav .dropdown-menu {
+    position: absolute;
+    top: 60px;
+    border-radius: 0;
+    border: none;
+    background: #0691ff;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+.top-nav .navbar-nav .dropdown-menu a {
+    display: inline;
+    font-weight: 600;
+    font-size: 14px;
+    padding: 30px 0 20px! important;
+    margin: 0 25px;
+    border-bottom: 5px solid transparent;
+    font-weight: 800;
+    background: none;
+}
+.top-nav .navbar-nav .dropdown-menu a:hover, 
+.top-nav .navbar-nav .dropdown-menu a.active {
+    border-bottom: 5px solid #000;
+}
+.top-nav .navbar-nav .dropdown-menu ul {
+    padding: 0;
+    display: inline-block;
+}
+
+.top-nav .navbar-nav .dropdown-menu ul li {
+    width: initial;
+    display: inline-flex;
+    border: none;
+    text-align: center;
+    position: relative;
+}
+.top-nav .navbar-nav .dropdown-menu ul li a:before {
+    content: attr(data-course);
+    position: absolute;
+    top: 16px;
+    font-size: 9px;
+    font-weight: 600;
+}
+/*
+Page Header
+*/
+.page-header.bg {
+    background-size: cover !important;
+}
+.page-header.bg .row {
+    padding: 150px 0;
+    display: inline-table;
+}
+
+.page-header.bg .row .vl-m {
+    display: table-cell;
+    vertical-align: middle;
+    height: 100%;
+    float: none;
+    width: 50%;
+    color: #fff;
+}
+
+.page-header h5, .page-header h2,.page-header h6 {
+    margin: 0 0 30px 0;
+}
+
+.page-header h5 {
+    font-size: 15px;
+    font-weight: 700;
+}
+
+.page-header h2 {
+    font-size: 60px;
+    font-weight: 900;
+}
+
+.page-header h6 {
+    opacity: 0.5;
+    font-size: 12px;
+    font-weight: 700;
+}
+.page-header p {
+    font-size: 14px;
+}
+#controller a {
+    position: static;
+}
+
+#controller {
+    position: absolute;
+    bottom: 10%;
+    left: 10%;
+}
+
+#controller .carousel-indicators {
+    position: sticky;
+    margin: 0;
+}
+
+#controller .carousel-indicators li {
+    width: 10px;
+    height: 10px;
+    border-radius: 100%;
+    float: left;
+    margin: 0 5px;
+    background: transparent;
+    border: 1px solid #fff;
+}
+
+#controller a,#controller .carousel-indicators {
+    display: table-cell;
+    padding: 0 10px;
+    vertical-align: middle;
+    width: auto;
+}
+#controller a i {
+    font-size: 30px;
+}
+
+#controller .carousel-indicators li.active {
+    background: #0691ff;
+    border-color: #0691ff;
+}
+.course {
+    display: table;
+    width: 100%;
+}
+
+.course .button {
+    width: 50%;
+}
+
+.course .button a {
+    background: #0691ff;
+    color: #fff;
+    border: none;
+    width: 95%;
+    padding: 12px 0;
+    border-radius: 10px;
+    font-size: 14px;
+}
+.course .button,.course .bar {
+    display: table-cell;
+    vertical-align: middle;
+}
+.course .bar {
+    background: #083c4f;
+    border-radius: 10px;
+    display: table-cell;
+    width: 100%;
+    padding: 0 15px;
+}
+.course .bar .progress {
+    width: 80%;
+    float: left;
+    height: 10px;
+    margin-top: 4px;
+}
+.course .bar span {
+    color: #fff;
+    float: right;
+    font-size: 12px;
+    font-weight: 600;
+}
+.course .bar .progress .progress-bar {
+    background: #0691ff;
+}
+/*
+    Course Open Paeg
+*/
+#player,
+#album {
+    margin: 0 -15px;
+}
+.page-title {
+    display: table;
+    vertical-align: middle;
+    margin: 0 auto;
+}
+#album .head {
+    background: #f5f5f5;
+   
+    display: table;
+    width: 100%;
+}
+#album .content {
+    padding: 30px;
+}
+
+/*
+    Forms
+*/
+.datafrms {
+    padding: 70px 20px;
+}
+.metaforms {
+    position: relative;
+}
+.metaforms .bg-white {
+    border-radius: 10px;
+    overflow: hidden;
+    padding: 0 5px;
+    border: 2px solid #000;
+}
+.metaforms .bg-white input,.metaforms .bg-white textarea {
+    border: none !important;
+    box-shadow: none;
+}
+
+.metaforms input,.metaforms textarea {
+    border: 2px solid #4c4c4c;
+    padding: 14px 10px;
+    font-size: 13px;
+    border-radius: 5px;
+    font-weight: 600;
+    color: #000;
+}
+
+.metaforms .form-group {
+    display: block;
+}
+.metaforms textarea {
+    padding: 19px 10px;
+}
+.metaforms input[type="submit"] {
+    width: 100%;
+    border: none;
+    font-size: 14px;
+    font-weight: 700;
+    padding: 12px 0;
+    color: #fff;
+}
+
+.metaforms span.tag {
+    font-size: 8px;
+    text-align: center;
+    float: left;
+    width: 100%;
+    padding: 5px 0 0;
+}
+.white-wrap {
+    background: #fff;
+    border-radius: 10px;
+    border: 2px solid #4c4c4c;
+    overflow: hidden;
+    margin-bottom: 17px;
+}
+.white-wrap input,.white-wrap textarea {
+    border: none;
+    box-shadow: none !important;
+}
+.white-wrap .form-group {
+    margin-bottom: 10px;
+}
+.addplaylist .nav {
+    position: absolute;
+    right: 0;
+    top: 0;
+    height: 100%;
+    display: table;
+}
+
+.addplaylist .nav ul {
+    padding: 0;
+    list-style: none;
+    margin: 0;
+    display: table-cell;
+    vertical-align: middle;
+}
+
+.addplaylist .nav ul li {
+    font-size: 40px;
+    margin: 30px 0 0
+}
+.addplaylist .form-group {
+    position: relative;
+}
+
+.addplaylist .form-group i {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    font-size: 20px;
+}
+/*
+Progress
+*/
+#album .head h5,#album .head circle {
+    display: table-cell;
+    vertical-align: middle;
+}
+#vimeoapi .playlist {
+    background: #fff;
+    border-left: 2px solid #eaeaea;
+}
+#album .head h5 {
+    font-size: 24px;
+    font-weight: 900;
+    color: #4c4c4c;
+}
+
+#album .head h5 span {
+    float: left;
+    width: 100%;
+    font-size: 12px;
+    font-weight: 800;
+    opacity: 0.6;
+}
+.circle {
+    position: relative;
+    text-align: center;
+    display: table;
+}
+.circle strong {
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    height: 100%;
+    display: table-cell;
+    vertical-align: middle;
+    padding: 19px 0;
+    font-size: 13px;
+    background: #fff;
+    border-radius: 100%;
+}
+.circle canvas {
+    position: relative;
+    z-index: 99;
+}
+.tabs .nav-tabs {
+    border: none;
+    display: inline-block;
+    text-align: center;
+    width: 100%;
+}
+.tabs .nav-tabs li {
+    display: inline-block;
+    margin: 0px -2px;
+}
+#album .tabs .nav-tabs li {
+    width: 33%;
+}
+.tabs .nav-tabs li a.active {
+    border-color: #0691ff;
+}
+.tabs .nav-tabs li a {
+    color: #4c4c4c;
+    font-size: 12px;
+    padding: 0 15px 16px;
+    display: block;
+    border-bottom: 5px solid;
+    text-decoration: none;
+    font-weight: 800;
+}
+#album .tab-content .title {
+    background: #f5f5f5;
+    border: 1px solid #eaeaea;
+}
+
+#album .tab-content .title .content {
+    padding-top: 18px;
+    padding-bottom: 18px;
+}
+
+#album .tab-content .title h6 {
+    margin-bottom: 0;
+    font-size: 14px;
+    font-weight: 800;
+    color: #4c4c4c;
+}
+.tab-content .elements ul li {
+    font-size: 13px;
+    padding: 10px 0px 10px 60px;
+    position: relative;
+}
+
+.tab-content .elements ul {
+    padding: 0;
+    list-style: none;
+    margin-bottom: 0;
+}
+.tab-content .elements {
+    padding: 30px 0;
+}
+.tab-content .elements ul li input[type="checkbox"] {
+    position: absolute;
+    right: 0;
+    width: 35px;
+    height: 35px;
+    top: 0;
+    z-index: 1;
+    opacity: 0;
+    cursor: pointer;
+}
+.tab-content .elements ul li .fa-plus {
+    position: absolute;
+    right: 0;
+    background: #0691ff;
+    color: #fff;
+    width: 35px;
+    height: 35px;
+    display: table;
+    top: 2px;
+    text-align: center;
+    opacity: 0;
+  
+
+}
+.tab-content .elements ul li:hover {
+    background: #fafafa;
+}
+.tab-content .elements ul li a {
+    width: 100%;
+    display: inline-block;
+    color: #000;
+}
+.tab-content .elements ul li:hover .fa-plus {
+    opacity: 1;
+}
+.tab-content .elements ul li .fa-plus:before {
+    display: table-cell;
+    vertical-align: middle;
+}
+.tab-content .elements ul li .checked {
+    position: absolute;
+    left: 30px;
+    width: 20px;
+    height: 20px;
+    border-radius: 100%;
+    background: #fff;
+    content: "";
+    border: 1px solid #0691ff;
+    font-size: 10px;
+}
+.tab-content .elements ul li input[type="checkbox"]:checked + i.checked:before {
+    content: "\f00c";
+    display: table-cell;
+    vertical-align: middle;
+    height: 100%;
+    padding: 4px 4px;
+}
+
+.tab-content .elements ul li input[type="checkbox"]:checked + i.checked {
+    background: #0691ff;
+    color: #fff;
+}
+/*
+Reviews
+*/
+#album .reviews .content p {
+    margin-bottom: 0;
+    font-size: 12px;
+    line-height: 20px;
+}
+/*
+Glosary
+*/
+#GLOSSARY #accordion {
+    display: inline-block;
+    width: 100%;
+}
+
+#GLOSSARY #accordion .item {
+    float: left;
+    width: 100%;
+}
+
+#GLOSSARY #accordion .item a.expand {
+    width: 100%;
+    display: block;
+    padding: 5px 0;
+    font-weight: 600;
+    cursor: pointer;
+}
+#GLOSSARY #accordion .item a.expand i {
+    float: right;
+    font-size: 20px;
+}
+#GLOSSARY #accordion .item a.expand i {
+    float: right;
+    font-size: 20px;
+}
+
+#GLOSSARY #accordion .item a.expand[aria-expanded="true"] .fa-angle-right:before {
+    content: "\f107";
+}
+.show .card-body p,
+#GLOSSARY #accordion .item a.expand[aria-expanded="true"] {
+    color: #0691ff;
+
+}
+/*
+Player
+*/
+#player iframe {
+    width: 100%;
+    background: #000;
+}
+
+/*
+Skills Page
+*/
+.tabs h5 {
+    float: left;
+    margin: 0;
+    font-weight: 900;
+    font-size: 18px;
+    margin-right: 20px;
+}
+.default .nav.nav-tabs {
+    border: none;
+    width: auto;
+    display: block;
+}
+.default .nav.nav-tabs li {
+    margin:0 2%;
+}
+
+.default .nav.nav-tabs li a {
+    color: #000;
+    font-size: 12px;
+    font-weight: 600;
+    padding: 15px 5px 15px;
+    text-decoration: none;
+    position: relative;
+    text-align: center;
+    display: inline-block;
+}
+
+.default .nav.nav-tabs li a.active,.default .nav.nav-tabs li a:hover {
+    border-bottom: 5px solid #19a4d8;
+}
+.nav.nav-tabs.skills li a:before {
+    content: "";
+}
+.nav.nav-tabs.skills li a i {
+    position: absolute;
+    top: -15px;
+    left: 0;
+    right: 0;
+    font-size: 20px;
+}
+#vimoegalley .item {
+    background: #fbfbfb;
+    border: 2px solid #ebebeb;
+    border-radius: 10px;
+    float: left;
+    width: 100%;
+    overflow: hidden;
+    margin-bottom: 30px;
+    
+}
+div#vimoegalley {
+    margin-bottom: 100px;
+}
+#vimoegalley .item iframe {
+    width: 100%;
+    background: #000;
+}
+
+#vimoegalley .item .body {
+    padding: 30px 30px 0;
+}
+#vimoegalley .item .head {
+    padding: 30px 30px 15px;
+    background: #fff;
+    display: table;
+    width: 100%;
+}
+
+#vimoegalley .item .head span {
+    display: inline-block;
+    width: 50%;
+    font-size: 14px;
+    font-weight: 900;
+    color: #8b8b8c;
+    display: table-cell;
+    vertical-align: middle;
+}
+
+#vimoegalley .item .head span.right {
+    text-align: right;
+}
+
+#vimoegalley .item .head span i {margin: 0 0 5px;}
+#vimoegalley .item .head span.right a {
+    font-size: 10px;
+    position: relative;
+    text-align: center;
+    margin: 0 10px;
+    color: #8b8b8c;
+    font-weight: 600;
+    text-decoration: none;
+    display: inline-grid;
+}
+#vimoegalley .item .head span.right a:last-child {
+    margin-right: 0;
+}
+#vimoegalley .item .head span.right i {
+    font-size: 15px;
+}
+/*
+Vimoe Responsive
+*/
+.tabs.mobile-forms {
+    margin-bottom: 50px;
+}
+
+.datafrms .close {
+    position: absolute;
+    bottom: 0;
+    background: #0691ff;
+    width: 100%;
+    left: 0;
+    padding: 20px;
+    opacity: 1;
+    text-align: center;
+    color: #fff;
+    text-transform: uppercase;
+    font-weight: 800;
+}
+ 
+.datafrms .close i {
+    margin-right: 15px;
+}
+/*
+Forum CSS
+*/
+.top-nav .navbar-nav .forum .dropdown-menu a {
+    padding-left: 20px !important;
+    padding-right: 20px !important;
+}
+#all-forums #sidebar {
+    background: #ebebeb;
+    padding: 0 30px;
+    height: 100%;
+}
+#all-forums #sidebar ul li {
+    display: table;
+    width: 100%;
+    padding: 0 0 30px;
+}
+#all-forums #sidebar ul {
+    margin: 0;
+    list-style: none;
+    padding: 0;
+}
+#all-forums .content {
+    padding-top: 80px;
+}
+#all-forums #sidebar ul li .infor {
+    display: table-cell;
+    vertical-align: middle;
+    font-weight: 500;
+}
+#all-forums #sidebar .avtar {
+    display: table-cell;
+    width: 50px;
+}
+#all-forums #sidebar ul li .infor p {
+    margin-bottom: 0;
+    color: #000;
+  
+}
+#all-forums #sidebar ul li a {
+    color: #0691ff;
+}
+.block {
+    display: inline-block;
+}
+.row.inline {
+    text-align: center;
+    display: inline-block;
+    width: 100%;
+}
+.forum .head {
+    position: relative;
+    display: table;
+    width: 100%;
+
+}
+.forum .title {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    text-align: center;
+    height: 100%;
+}
+
+.forum .title h2 {
+    display: table;
+    vertical-align: middle;
+    height: 100%;
+    width: 100%;
+    color: #fff;
+    font-size: 50px;
+    font-weight: 800;
+}
+
+.forum .title h2 span {
+    display: table-cell;
+    vertical-align: middle;
+}
+.content .forum {
+    background: #fafafa;
+    border-radius: 10px;
+    overflow: hidden;
+    margin-bottom: 5%;
+    box-shadow: 0px 0px 10px -4px #000;
+}
+.content .forum .body {
+    padding: 30px 22px 22px;
+    white-space: normal;
+}
+
+.content .forum .body ul.status {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: inline-block;
+    width: 100%;
+    border-radius: 8px;
+    border: 1px solid #e2e2e2;
+}
+
+.content .forum .body ul.status li {
+    font-size: 10px;
+    width: 33.3%;
+    float: left;
+    color: #000;
+    font-weight: 600;
+    padding: 5px 0;
+    text-align: center;
+}
+.content .forum .body ul li span {
+    float: left;
+    width: 100%;
+    color: #0691ff;
+    font-size: 25px;
+    font-weight: 800;
+    line-height: normal;
+}
+
+.content .forum .body ul.status li:first-child {
+    border-right: 1px solid #e2e2e2;
+}
+
+.content .forum .body ul.status li:last-child {
+    border-left: 1px solid #e2e2e2;
+}
+.content .forum .body .links {
+    display: table;
+    width: 100%;
+    margin-top: 30px;
+}
+
+.content .forum .body .links > div {
+    display: table-cell;
+    vertical-align: middle;
+    width: 50%;
+}
+
+.content .forum .body .links .members ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    float: left;
+}
+
+.content .forum .body .links .members ul li {
+    display: inline-block;
+}
+.content .forum .body .links a.opencourse {
+    width: 100%;
+    background: #083c4f;
+    color: #fff;
+    padding: 12px 0;
+    border-radius: 7px;
+    font-size: 13px;
+}

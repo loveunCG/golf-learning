@@ -1,0 +1,107 @@
+<div id="player"> </div>
+<!-- Playlist form-->
+<div class="row datafrms">
+    <!--Mobile Tabs-->
+    <div class="col-12">
+        <div class="tabs mobile-forms">
+            <ul class="nav nav-tabs">
+                <li><a class="active show" data-toggle="tab" href="#questions">QUESTION</a></li>
+                <li><a data-toggle="tab" href="#addplaylist">PLAYLIST</a></li>
+                <li><a data-toggle="tab" href="#send">MESSAGE</a></li>
+            </ul>
+        </div>
+    </div>
+    <!-- End Mobile Tabs-->
+    <!-- Post Question-->
+    <div class="col-xl-4 col-lg-12 col-md-12 tab show active" id="questions">
+        <div class="metaforms">
+            <form novalidate [formGroup]="forumForm">
+                <div class="white-wrap">
+                    <div class="form-group">
+                        <input formControlName="title" class="form-control" type="text" placeholder="Question Title...">
+                    </div>
+                    <div class="form-group">
+                        <textarea formControlName="content" class="form-control" id="exampleFormControlTextarea1" rows="4" placeholder="Write your question here..."></textarea>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <input type="submit" class="btn btn-primary" 
+                    [disabled]="forumForm.invalid" 
+                    value="POST QUESTION"
+                    (click)="onSendQuestion()"/>
+                    <span class="tag">* All questions will be tagged and inputed into the Academy Forum</span>
+                </div>
+            </form>
+        </div>
+    </div>
+    <!-- End Post Question-->
+    <!-- Send Message -->
+    <div class="col-xl-4 col-lg-12 col-md-12 tab" id="send">
+        <div class="metaforms">
+            <form novalidate [formGroup]="messageForm">
+                <div class="form-group">
+                    <input class="form-control" auto-complete formControlName="user" 
+                    [source]="userlist" 
+                    [list-formatter]="'name'"
+                    placeholder="Enter friends name..." />
+                </div>
+                <div class="form-group">
+                    <textarea formControlName="message" class="form-control" id="exampleFormControlTextarea1" rows="4" placeholder="Write your message here..."></textarea>
+                </div>
+                <div class="form-group">
+                    <input type="submit" class="btn btn-primary" 
+                    [disabled]="messageForm.invalid"
+                    value="SEND MESSSAGE"                    
+                    (click)="onSendMessage()"/>
+                    <span class="tag"> * Want a personal George Gankas Certified coach to message?  
+                        <span class="upgrade">UPGRADE HERE</span>
+                    </span>
+                </div>
+            </form>
+        </div>
+    </div>
+    <!-- End Send Message-->
+    <!-- Add to playlist-->
+    <div class="col-xl-4 col-lg-12 col-md-12 tab" id="addplaylist">
+        <div class="metaforms addplaylist">
+            <div class="form-group add-playlist">
+                <i class="fas fa-plus" (click)="openVerticallyCentered()"></i>
+                <input class="form-control" type="text" placeholder=""  value="Add Playlist" disabled>
+            </div>
+            <div class="playlist-wrapper" #panel>
+                <div class="form-group" *ngFor="let list of playlist">
+                    <input class="form-control playlist-item" 
+                    type="text" placeholder=""  
+                    readonly 
+                    value="{{list.name}}"
+                    (click)="onClickPlaylistItem(list)"
+                    [class.active]="list == activePlaylist"
+                    >
+                    <i class="fas fa-bars"></i>
+                    <div class="playlistitem-wrapper" *ngIf="list?.is_expand">
+                        <ul>
+                            <li *ngFor="let listitem of list.playitems">({{listitem.video_uid}}) &nbsp; {{listitem.name}}</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="form-group add-playlist-button-wrapper">
+                <input type="submit" class="btn btn-primary" 
+                value="ADD TO PLAYLIST" 
+                [disabled]="!activePlaylist"
+                (click)="onAddToPlaylist()"/>
+            </div>
+            <div class="nav">
+                <ul>
+                    <li (click)="onPreviousSearchPosition()"><i class="fas fa-angle-up"></i></li>
+                    <li (click)="onNextSearchPosition()"><i class="fas fa-angle-down"></i></li>
+                </ul>
+            </div>       
+        </div>
+    </div>
+    <!-- Post Question-->
+    <!-- <div class="close">
+        <i class="fa fa-times"></i> Close
+    </div> -->
+</div>
+<!-- End  Playlist form-->
